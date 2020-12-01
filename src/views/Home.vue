@@ -48,8 +48,9 @@
       </span>
     </button>
 
+    <input class="input" type="text" placeholder="Поиск">
 
-
+    <input class="input" type="text" style="width: 300px">
   </div>
 </template>
 
@@ -63,8 +64,7 @@ export default {
 
 <style  scoped lang="sass">
   .btn
-
-
+  .input
 
 
 </style>
