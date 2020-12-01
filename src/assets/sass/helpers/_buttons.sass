@@ -1,0 +1,220 @@
+.btn
+  border-radius: 99px
+  cursor: pointer
+
+  &:active
+    outline: none
+
+  &:focus
+    outline: none
+
+
+.btn-card
+  width: 200px
+  height: 50px
+  border-radius: 99px
+  border: 2px solid $color-black
+  background: $color-white
+  //background: #409caa
+
+  &:hover
+    border: none
+    background: $color-turquoise
+
+  &:hover span
+    color: $color-white
+
+  span
+    color: $color-black
+    font-size: $font-size--l
+    +reg
+
+
+.btn-menu-color
+  background: $color-turquoise
+  border: 2px solid transparent
+  padding: 10px 20px
+
+  &:hover
+    background: $color-white
+    border: 2px solid $color-turquoise
+    transition: .2s;
+
+  &:hover span
+    color: $color-turquoise
+    transition: .2s;
+
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-white
+    +reg
+    font-size: $font-size--ls
+
+
+.btn-menu-border
+  background: $color-white
+  border: 2px solid $color-turquoise
+  padding: 10px 20px
+
+  &:hover
+    background: $color-turquoise
+    border: 2px solid transparent
+    transition: .2s;
+
+  &:hover span
+    color: $color-white
+    transition: .2s;
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-turquoise
+    +reg
+    font-size: $font-size--ls
+
+
+.btn-table-1
+  background: $color-turquoise
+  padding: 8px 30px
+  border: none
+
+  &:hover
+    background: $color-dark-grey
+    transition: .2s;
+
+  &:hover span
+    color: $color-btn-grey
+    transition: .2s;
+
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-white
+    +reg
+    font-size: $font-size--ms
+
+
+
+.btn-table-2
+  background: $color-dark-grey
+  padding: 8px 30px
+  border: none
+
+  &:hover
+    background: $color-turquoise
+    transition: .2s;
+
+  &:hover span
+    color: $color-white
+    transition: .2s;
+
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-btn-grey
+    +reg
+    font-size: $font-size--ms
+
+
+.btn-main
+  border: 2px solid transparent
+  background: $color-turquoise
+
+  &:hover
+    border: 2px solid transparent
+    background: #409caa
+
+  &:hover span
+    color: $color-white
+
+  span
+    color: $color-white
+
+
+.btn-cycle
+  background: $color-white
+  width: 30px
+  height: 30px
+  border: 2px solid $color-tab-grey
+
+  &:hover
+    background: $color-turquoise
+    border: 2px solid transparent
+    transition: .2s;
+
+  &:hover span
+    color: $color-white
+    transition: .2s;
+
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-btn-grey
+    +reg
+    font-size: $font-size--ms
+
+
+.btn-cycle-num
+  background: $color-dark-grey
+  width: 30px
+  height: 30px
+  border: 2px solid $color-tab-grey
+  cursor: default
+
+  span
+    color: $color-black
+    +reg
+    font-size: $font-size--xs
+
+
+.btn-r
+  text-transform: uppercase
+  background: $color-btn-grey
+  border: 2px solid transparent
+  padding: 10px 20px
+
+  &:hover
+    background: transparent
+    border: 2px solid $color-btn-grey
+    transition: .2s;
+
+  &:hover span
+    color: $color-white
+    transition: .2s;
+
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-white
+    +reg
+    font-size: $font-size--ls
+
+
+.btn-l
+  text-transform: uppercase
+  background: transparent
+  border: 2px solid $color-btn-grey
+  padding: 10px 20px
+
+  &:hover
+    background: $color-btn-grey
+    border: 2px solid transparent
+    transition: .2s;
+
+  &:hover span
+    color: $color-white
+    transition: .2s;
+  &:not(:hover)
+    transition: .2s;
+
+  span
+    color: $color-white
+    +reg
+    font-size: $font-size--ls
+
