@@ -1,6 +1,5 @@
 module.exports = {
   lintOnSave: false,
-  // exclude: [/node_modules/, require.resolve('./index.html')],
   pluginOptions: {
     svgSprite: {
       /*
@@ -42,7 +41,6 @@ module.exports = {
     config.module
       .rule('svg-sprite')
       .use('svgo-loader')
-      .loader('svgo-loader');
-
+      .loader('svgo-loader')
   }
 };
