@@ -1,14 +1,69 @@
 <template>
   <div class="home">
-    <p>1dqwрарарарer4</p>
+    <button class="btn btn-r" >
+      <span>Registration</span>
+    </button>
+
+    <button class="btn btn-l" >
+      <span>Login</span>
+    </button>
+
+    <button class="btn btn-card" >
+      <span>Get started</span>
+    </button>
+
+    <button class="btn btn-card btn-main" >
+      <span>Get started</span>
+    </button>
+
+    <button class="btn btn-menu-color" >
+      <span>Вывод</span>
+    </button>
+
+    <button class="btn btn-menu-border" >
+      <span>Реинвестировать</span>
+    </button>
+
+    <button class="btn btn-table-1" >
+      <span>Кнопка 1</span>
+    </button>
+
+    <button class="btn btn-table-2" >
+      <span>Кнопка 2</span>
+    </button>
+
+    <button class="btn btn-cycle" >
+      <span>
+        <
+      </span>
+    </button>
+
+    <button class="btn btn-cycle-num" >
+      <span>01</span>
+    </button>
+
+    <button class="btn btn-cycle" >
+      <span>
+        >
+      </span>
+    </button>
+
+    <input class="input" type="text" placeholder="Поиск">
+
+    <input class="input" type="text" style="width: 300px">
+
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'Home',
   components: {
   }
 }
 </script>
+
+<style  scoped lang="sass">
+  .btn
+  .input
+</style>
