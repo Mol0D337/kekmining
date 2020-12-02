@@ -1,11 +1,10 @@
 <template>
   <div class="home">
-    <p>12312414</p>
+    <p>1dqwрарарарer4</p>
   </div>
 </template>
 
 <script>
-
 
 export default {
   name: 'Home',
