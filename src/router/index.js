@@ -12,5 +12,10 @@ export default new VueRouter({
       name: 'MainPage',
       component: () => import('../views/MainPage.vue')
     },
+    {
+      path: '/set',
+      name: 'set',
+      component: () => import('../views/set.vue')
+    },
   ]
 })

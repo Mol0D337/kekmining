@@ -1,52 +1,58 @@
 <template>
-  <div class="all">
-    <div class="wrapper">
-      <div class="wrapper__header">
-        <div class="header">
-          <div class="logotype">
-            <img src="../assets/images/imgIcons/1.png" alt="">
+  <div>
+    <div class="opacity"></div>
+    <div class="all">
+      <div class="wrapper">
+        <div class="wrapper__header">
+          <div class="header">
+            <div class="logotype">
+              <img src="../assets/images/imgIcons/1.png" alt="">
+            </div>
+            <ul>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">POSSIBILITIES</a></li>
+              <li><a href="#">PRICE</a></li>
+              <li><a href="#">TESTIMONIALS</a></li>
+              <li>
+                <Registration/>
+              </li>
+              <li>
+                <Login/>
+              </li>
+              <li><a href="#">EN</a></li>
+            </ul>
           </div>
-          <ul>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">POSSIBILITIES</a></li>
-            <li><a href="#">PRICE</a></li>
-            <li><a href="#">TESTIMONIALS</a></li>
-            <li>
-              <button class="btn btn-r" style="opacity: 0.5;">
-                <span>registration</span>
-              </button>
-            </li>
-            <li>
-              <button class="btn btn-l" style="opacity: 0.5;">
-                <span>enter</span>
-              </button>
-            </li>
-            <li><a href="#">EN</a></li>
-          </ul>
         </div>
-      </div>
-      <div class="about">
-        <div class="title">
-          start mining production with industry leaders
+        <div class="about">
+          <div class="title">
+            start mining production with industry leaders
+          </div>
+          <div class="title__sub">
+            We make industrial mining accessible to all. You get access
+            to the latest and most advanced technologies in the industry
+            provided by the leading company.
+          </div>
+          <button class="btn btn-main">
+            <span>Get started</span>
+          </button>
         </div>
-        <div class="title__sub">
-          We make industrial mining accessible to all. You get access
-          to the latest and most advanced technologies in the industry
-          provided by the leading company.
-        </div>
-        <button class="btn btn-main">
-          <span>Get started</span>
-        </button>
       </div>
     </div>
   </div>
 
+
 </template>
 
 <script>
-  export default {
-    name: "MainPage",
-  }
+import Login from '../components/Login'
+import Registration from "../components/Registration";
+export default {
+  name: 'MainPage',
+  components: {
+    Registration,
+    Login
+  },
+}
 </script>
 
 <style scoped lang="sass">
@@ -54,6 +60,8 @@
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.25)
 
   .all
+    margin-bottom: 1000px
+
     width: 100vw
     height: 100vh
     background: url("../assets/images/imgPage/111.png") no-repeat center center
@@ -105,8 +113,5 @@
         font-size: $font-size--ms
         +reg
         line-height: 1.6
-
-
-
 
 </style>
