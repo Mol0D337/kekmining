@@ -2,6 +2,16 @@ import firebase from 'firebase/app'
 
 export default {
     actions: {
+      async reset({dispatch, commit}, payload) {
+        const { email } = payload;
+        try {
+          await firebase.auth().sendPasswordResetEmail(email).then(() => {
+            console.log('12341234')
+          })
+        } catch (e) {
+          throw e
+        }
+      },
         async login({dispatch, commit}, payload) {
             const { email, password } = payload;
             try {
@@ -53,10 +63,10 @@ export default {
 
 
         async updateCategory3({ dispatch, rootState}) {
-            const uid = await dispatch('getuid')
+            const uid = await dispatch('getuid');
             const editPassword = {
                 password: rootState.info.password
-            }
+            };
             await firebase.database().ref(`/users/${uid}/info`).update(editPassword)
         },
 

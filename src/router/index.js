@@ -17,5 +17,16 @@ export default new VueRouter({
       name: 'set',
       component: () => import('../views/set.vue')
     },
+    {
+      path: '/reset',
+      name: 'Reset',
+      component: () => import('../views/Reset.vue')
+    },
+
+    {
+      path: '/reset/password',
+      name: 'ResetPassword',
+      component: () => import('../views/ResetPassword.vue')
+    },
   ]
 })

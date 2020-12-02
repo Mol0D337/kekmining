@@ -49,10 +49,13 @@
               <p class="typo__p" v-if="submitStatus === 'ERROR'">Неверный логин или пароль.</p>
 
               <div class="link">
-                <div class="link__left">Забыли пароль?</div>
-                <div class="link__right">
-
-                </div>
+                <router-link
+                  :to="{ name: 'Reset' }"
+                  tag="div"
+                  class="link__right"
+                >
+                  Забыли пароль?
+                </router-link>
               </div>
             </div>
           </div>
@@ -200,7 +203,7 @@
       color: #8b19aa
       cursor: pointer
     &__right
-      color: $color-light-blue
+      color: #8b19aa
       cursor: pointer
 
 </style>
