@@ -38,14 +38,8 @@
           <span>Get started</span>
         </button>
       </div>
-      <div class="dot">
-        <img src="../assets/images/imgIcons/34.png" alt="">
-      </div>
     </div>
-
   </div>
-
-
 
 </template>
 
@@ -58,19 +52,11 @@
 <style scoped lang="sass">
   .btn-main
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.25)
-  .dot
-    display: flex
-    justify-content: center
 
-    img
-      width: 20px
-      height: 20px
-      color: $color-turquoise
-      transform: translateY(320px)
   .all
     width: 100vw
     height: 100vh
-    /*background: url("../assets/images/imgPage/111.png") no-repeat center center*/
+    background: url("../assets/images/imgPage/111.png") no-repeat center center
     background-size: cover
     transition: background-position .5s ease-out
 

@@ -129,9 +129,15 @@
   &:hover
     border: 2px solid transparent
     background: #409caa
+    transition: .2s
 
   &:hover span
     color: $color-white
+    transition: .2s
+
+  &:not(:hover)
+    transition: .2s
+
 
   span
     color: $color-white
@@ -178,13 +184,13 @@
 
 .btn-r
   text-transform: uppercase
-  background: $color-btn-grey
+  background: $color-btn-blue
   border: 2px solid transparent
-  padding: 7px 17px
+  padding: 10px 20px
 
   &:hover
     background: transparent
-    border: 2px solid $color-btn-grey
+    border: 2px solid $color-btn-blue
     transition: .2s
 
   &:hover span
@@ -197,17 +203,17 @@
   span
     color: $color-white
     +reg
-    font-size: $font-size--ls
+    font-size: $font-size--ms
 
 
 .btn-l
   text-transform: uppercase
   background: transparent
-  border: 2px solid $color-btn-grey
-  padding: 7px 17px
+  border: 2px solid $color-btn-blue
+  padding: 10px 20px
 
   &:hover
-    background: $color-btn-grey
+    background: $color-btn-blue
     border: 2px solid transparent
     transition: .2s
 
@@ -220,5 +226,5 @@
   span
     color: $color-white
     +reg
-    font-size: $font-size--ls
+    font-size: $font-size--ms
 
