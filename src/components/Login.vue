@@ -51,8 +51,7 @@
               <div class="link">
                 <div class="link__left">Забыли пароль?</div>
                 <div class="link__right">
-                  <a href="registrathion">Регистрация</a>
-                  <Registration/>
+
                 </div>
               </div>
             </div>
@@ -71,7 +70,7 @@
 
   export default {
     name: 'Login',
-    components: {Registration},
+    components: { Registration},
     data() {
       return {
         dialog: false,
@@ -191,7 +190,7 @@
 
   .link
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
     padding-bottom: 15px
     +extraB
