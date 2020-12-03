@@ -13,7 +13,7 @@
       </button>
     </template>
 
-    <form class="modal" @submit.prevent="submit">
+    <form class="modal" @submit.prevent="submit" v-click-outside="hide">
 
       <div class="modal__wrapper"  >
         <div class="modal__top">
@@ -99,6 +99,9 @@
     methods: {
       closeModal() {
         this.dialog = false;
+      },
+      hide () {
+        this.dialog = false
       },
       async submit() {
         this.$v.$touch();
