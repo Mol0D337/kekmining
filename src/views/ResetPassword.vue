@@ -7,44 +7,17 @@
         <div class="modal__title">Востановление пароля</div>
       </div>
 
-      <form @submit.prevent="submit">
-
-        <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
-          <div>Пароль:</div>
-          <input class="input" type="password"
-                 v-model.trim="$v.password.$model"
-          >
-        </div>
-
-        <div class="inputs" :class="{ 'form-group--error': $v.repeatPassword.$error }">
-          <div>Повторите пароль:</div>
-          <input class="input" type="password"
-                 v-model.trim="$v.repeatPassword.$model"
-          >
-        </div>
-
-        <div class="btn__wrapper">
-          <button type="submit" class="btn btn-main" :disabled="submitStatus === 'PENDING'">
-            <span>Изменить</span>
-          </button>
-        </div>
-        <p class="typo__p" v-if="submitStatus === 'ERROR'">Что то пошло не так((</p>
-
-        <div class="link">
-          <router-link
-            :to="{ name: 'MainPage' }"
-            tag="div"
-            class="link__right"
-          >
-            На главную
-          </router-link>
+      <form action="" @submit.prevent="passwordHandler">
+        <div class="fix__name" >
+          <input type="password" v-model="password" placeholder="Введите Новый Пароль">
+          <button class="btn__fix" >Изменить Пароль</button>
         </div>
       </form>
 
       <div class="nickname"
            v-for="c of categories"
       >
-        {{c.email}}
+        {{c}}
       </div>
 
     </div>
@@ -53,52 +26,35 @@
 </template>
 
 <script>
-  import { required, minLength, maxLength, sameAs} from 'vuelidate/lib/validators'
+
   export default {
     name: "Reset",
     data: () => ({
       categories: [],
-      password: '',
-      repeatPassword: '',
-      submitStatus: null,
     }),
     async mounted() {
-      this.categories = await this.$store.dispatch('fetchCategories')
-    },
-    validations: {
-      password: {
-        required,
-        minLength: minLength(6),
-        maxLength: maxLength(15),
-      },
-      repeatPassword: {
-        sameAsPassword: sameAs('password')
+      this.categories = await this.$store.dispatch('fetchCategories');
+
+      if (!Object.keys(this.$store.getters.info).length) {
+        await this.$store.dispatch('fetchInfo')
       }
     },
     methods: {
-      async submit() {
-        this.$v.$touch();
-        if (this.$v.$invalid) {
-          this.submitStatus = 'ERROR'
-        } else {
-          try {
-            const password = {password: this.password};
-            await this.$store.dispatch('updateCategory3', password);
-            this.$router.push('/');
-          } catch (e) {
-          }
+      async passwordHandler() {
+        const password = {password: this.password};
+        await this.$store.dispatch('updateCategory3', password);
+        alert('3')
+      },
+    },
+    computed: {
+      password: {
+        get () {
+          return this.$store.getters.getPassword;
+        },
+        set (value) {
+          this.$store.commit('SET_PASSWORD', value);
         }
       },
-      computed: {
-        password: {
-          get () {
-            return this.$store.getters.getPassword;
-          },
-          set (value) {
-            this.$store.commit('SET_PASSWORD', value);
-          }
-        },
-      }
     }
   }
 </script>

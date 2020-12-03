@@ -7,13 +7,14 @@
   >
     <template v-slot:activator="{ on }">
       <button class="btn btn-l"
+
               @click="dialog = true"
       >
         <span>entry</span>
       </button>
     </template>
 
-    <form class="modal" @submit.prevent="submit" v-click-outside="hide">
+    <form class="modal" @submit.prevent="submit">
 
       <div class="modal__wrapper"  >
         <div class="modal__top">
@@ -99,9 +100,6 @@
     methods: {
       closeModal() {
         this.dialog = false;
-      },
-      hide () {
-        this.dialog = false
       },
       async submit() {
         this.$v.$touch();
