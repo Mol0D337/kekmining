@@ -20,7 +20,7 @@
       <div class="modal__wrapper">
 
         <div class="modal__top">
-          <img src="../assets/images/backgroundM/5.svg" alt="">
+          <img src="../../assets/images/backgroundM/5.svg" alt="">
           <div class="modal__title">Регистрация учасников</div>
 
           <div class="clear" @click="closeModal">&times;</div>

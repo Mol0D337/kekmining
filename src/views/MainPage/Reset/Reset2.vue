@@ -3,7 +3,7 @@
     <div class="reset">
 
       <div class="modal__top">
-        <img src="../assets/images/backgroundM/5.svg" alt="">
+        <img src="../../../assets/images/backgroundM/5.svg" alt="">
         <div class="modal__title">Востановление пароля</div>
       </div>
 

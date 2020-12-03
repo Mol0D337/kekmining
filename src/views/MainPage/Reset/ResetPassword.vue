@@ -3,34 +3,22 @@
     <div class="reset">
 
       <div class="modal__top">
-        <img src="../assets/images/backgroundM/5.svg" alt="">
+        <img src="../../../assets/images/backgroundM/5.svg" alt="">
         <div class="modal__title">Востановление пароля</div>
       </div>
 
-      <form @submit.prevent="submit">
-        <div class="inputs" :class="{ 'form-group--error': $v.email.$error }">
-          <div>Электронный адрес:</div>
-          <input class="input" type="text"
-                 v-model.trim="$v.email.$model"
-          >
-        </div>
-        <div class="btn__wrapper">
-          <button type="submit" class="btn btn-main" :disabled="submitStatus === 'PENDING'">
-            <span>Отправить</span>
-          </button>
-        </div>
-        <p class="typo__p" v-if="submitStatus === 'ERROR'">Что то пошло не так((</p>
-
-        <div class="link">
-          <router-link
-            :to="{ name: 'MainPage' }"
-            tag="div"
-            class="link__right"
-          >
-            На главную
-          </router-link>
+      <form action="" @submit.prevent="passwordHandler">
+        <div class="fix__name" >
+          <input type="password" v-model="password" placeholder="Введите Новый Пароль">
+          <button class="btn__fix" >Изменить Пароль</button>
         </div>
       </form>
+
+      <div class="nickname"
+           v-for="c of categories"
+      >
+        {{c}}
+      </div>
 
     </div>
   </div>
@@ -38,37 +26,33 @@
 </template>
 
 <script>
-  import { required, minLength, email, maxLength} from 'vuelidate/lib/validators'
+
   export default {
     name: "Reset",
-    data() {
-      return {
-        email: '',
-        submitStatus: null,
+    data: () => ({
+      categories: [],
+    }),
+    async mounted() {
+      this.categories = await this.$store.dispatch('fetchCategories');
+
+      if (!Object.keys(this.$store.getters.info).length) {
+        await this.$store.dispatch('fetchInfo')
       }
     },
-    validations: {
-      email: {
-        email,
-        required,
-        minLength: minLength(4),
-        maxLength: maxLength(254),
+    methods: {
+      async passwordHandler() {
+        const password = {password: this.password};
+        await this.$store.dispatch('updateCategory3', password);
+        alert('3')
       },
     },
-    methods: {
-      async submit() {
-        this.$v.$touch();
-        if (this.$v.$invalid) {
-          this.submitStatus = 'ERROR'
-        } else {
-          const formData = {
-            email: this.email,
-          };
-          try {
-            await this.$store.dispatch('reset', formData);
-            this.$router.push('/');
-          } catch (e) {
-          }
+    computed: {
+      password: {
+        get () {
+          return this.$store.getters.getPassword;
+        },
+        set (value) {
+          this.$store.commit('SET_PASSWORD', value);
         }
       },
     }

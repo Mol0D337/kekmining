@@ -10,7 +10,7 @@ export default new VueRouter({
     {
       path: '/',
       name: 'MainPage',
-      component: () => import('../views/MainPage.vue')
+      component: () => import('../views/MainPage/MainPage.vue')
     },
     {
       path: '/set',
@@ -20,18 +20,18 @@ export default new VueRouter({
     {
       path: '/reset',
       name: 'Reset',
-      component: () => import('../views/Reset.vue')
+      component: () => import('../views/MainPage/Reset/Reset.vue')
     },
     {
       path: '/reset2',
       name: 'Reset2',
-      component: () => import('../views/Reset2.vue')
+      component: () => import('../views/MainPage/Reset/Reset2.vue')
     },
 
     {
       path: '/reset/password',
       name: 'ResetPassword',
-      component: () => import('../views/ResetPassword.vue')
+      component: () => import('../views/MainPage/Reset/ResetPassword.vue')
     },
   ]
 })
