@@ -4,6 +4,8 @@
     persistent
     max-width="480px"
     :class="dialog ? 'kek' : ''"
+    @keydown.esc="closeModal"
+    @click:outside="closeModal"
   >
     <template v-slot:activator="{ on }">
       <button class="btn btn-l"
@@ -72,9 +74,18 @@
   import { required, minLength, email, maxLength } from 'vuelidate/lib/validators'
   import Registration from "./Registration";
   import ClickOutside  from 'vue-click-outside'
+  import { mapGetters } from 'vuex';
 
   export default {
     name: 'Login',
+    computed: {
+      ...mapGetters([
+        'getModal',
+        'getModalType',
+        'getCancelHandler',
+        'getAgreeHandler'
+      ])
+    },
     components: { Registration},
     data() {
       return {
@@ -99,7 +110,7 @@
     },
     methods: {
       closeModal() {
-        this.dialog = false;
+        this.dialog = false
       },
       async submit() {
         this.$v.$touch();

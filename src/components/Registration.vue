@@ -4,6 +4,8 @@
     persistent
     max-width="480px"
     :class="dialog ? 'kek' : ''"
+    @keydown.esc="closeModal"
+    @click:outside="closeModal"
   >
     <template v-slot:activator="{ on2 }">
       <button

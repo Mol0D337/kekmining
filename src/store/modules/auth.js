@@ -2,16 +2,33 @@ import firebase from 'firebase/app'
 
 export default {
     actions: {
-      async reset({dispatch, commit}, payload) {
-        const { email } = payload;
-        try {
-          await firebase.auth().sendPasswordResetEmail(email).then(() => {
-            console.log('12341234')
-          })
-        } catch (e) {
-          throw e
-        }
-      },
+        async reset2({dispatch, commit}, payload) {
+          const { email } = payload;
+          const actionCodeSettings = {
+            url: 'http://localhost:8080/reset/password',
+          };
+          try {
+            await firebase.auth().sendSignInLinkToEmail( email, actionCodeSettings )
+              .then(() => {
+                window.localStorage.setItem('emailForSignIn', email);
+                console.log('12341234')
+              })
+          } catch (e) {
+            throw e
+          }
+        },
+
+        async reset({dispatch, commit}, payload) {
+          const { email } = payload;
+          try {
+            await firebase.auth().sendPasswordResetEmail(email).then(() => {
+              console.log('12341234')
+            })
+          } catch (e) {
+            throw e
+          }
+        },
+
         async login({dispatch, commit}, payload) {
             const { email, password } = payload;
             try {
@@ -42,26 +59,6 @@ export default {
             commit('clearInfo')
         },
 
-
-
-        async updateCategory1({ dispatch, rootState}) {
-            const uid = await dispatch('getuid')
-            const editName = {
-                name: rootState.info.name
-            }
-            await firebase.database().ref(`/users/${uid}/info`).update(editName)
-        },
-
-
-        async updateCategory2({ dispatch, rootState}) {
-            const uid = await dispatch('getuid')
-            const editEmail = {
-                email: rootState.info.email
-            }
-            await firebase.database().ref(`/users/${uid}/info`).update(editEmail)
-        },
-
-
         async updateCategory3({ dispatch, rootState}) {
             const uid = await dispatch('getuid');
             const editPassword = {
@@ -69,7 +66,6 @@ export default {
             };
             await firebase.database().ref(`/users/${uid}/info`).update(editPassword)
         },
-
 
         // async updateCategoryLOL({ dispatch, rootState}, {payload}) {
         //     const {email = null, password = null, nickname = null } = payload;
@@ -86,8 +82,8 @@ export default {
 
         async fetchCategories({ dispatch}) {
             try {
-                const uid = await dispatch('getuid')
-                const categories = (await firebase.database().ref(`/users/${uid}`).once('value')).val() || {}
+                const uid = await dispatch('getuid');
+                const categories = (await firebase.database().ref(`/users/${uid}`).once('value')).val() || {};
                 return Object.keys(categories).map(key => ({...categories[key]}))
             } catch (e) {
                 throw e
