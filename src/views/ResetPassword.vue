@@ -163,12 +163,10 @@
 
   .modal
     background: $color-white
-    border-radius: 4px
     &__top
       position: relative
     &__top img
       width: 100%
-      border-radius: 4px
 
     &__title
       +reg
@@ -187,6 +185,5 @@
     background: $color-white
     width: 480px
     margin: 0 auto
-    border-radius: 4px
 
 </style>

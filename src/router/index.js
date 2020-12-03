@@ -22,7 +22,6 @@ export default new VueRouter({
       name: 'Reset',
       component: () => import('../views/Reset.vue')
     },
-
     {
       path: '/reset/password',
       name: 'ResetPassword',

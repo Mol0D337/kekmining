@@ -1,81 +1,83 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
-  <v-layout row justify-center>
-    <v-dialog
-      v-model="dialog"
-      persistent
-      max-width="480px"
-    >
-      <template v-slot:activator="{ on }">
-        <button class="btn btn-l" v-on="on">
-          <span>entry</span>
-        </button>
-      </template>
+  <v-dialog
+    v-model="dialog"
+    persistent
+    max-width="480px"
+    :class="dialog ? 'kek' : ''"
+  >
+    <template v-slot:activator="{ on }">
+      <button class="btn btn-l"
+              @click="dialog = true"
+      >
+        <span>entry</span>
+      </button>
+    </template>
 
-      <form class="modal" @submit.prevent="submit">
-        <div class="modal__wrapper">
+    <form class="modal" @submit.prevent="submit">
 
-          <div class="modal__top">
-            <img src="../assets/images/backgroundM/5.svg" alt="">
-            <div class="modal__title">Вход для Учасников</div>
+      <div class="modal__wrapper"  >
+        <div class="modal__top">
+          <img src="../assets/images/backgroundM/5.svg" alt="">
+          <div class="modal__title">Вход для Учасников</div>
 
-            <div class="clear" @click="closeModal">&times;</div>
+          <div class="clear" @click="closeModal">&times;</div>
 
-          </div>
+        </div>
+        <div class="modal__bottom">
+          <div class="modal__bottom-wrapper">
 
-          <div class="modal__bottom">
-            <div class="modal__bottom-wrapper">
+            <div class="inputs" :class="{ 'form-group--error': $v.email.$error }">
+              <div>Электронный адрес:</div>
+              <input class="input" type="text"
+                     placeholder="UserEmail@kekmining.com"
+                     v-model.trim="$v.email.$model"
+              >
+            </div>
 
-              <div class="inputs" :class="{ 'form-group--error': $v.email.$error }">
-                <div>Электронный адрес:</div>
-                <input class="input" type="text"
-                       placeholder="UserEmail@kekmining.com"
-                       v-model.trim="$v.email.$model"
-                >
-              </div>
+            <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
+              <div>Пароль:</div>
+              <input class="input" type="password" placeholder="Password"
+                     v-model.trim="$v.password.$model"
+              >
+            </div>
 
-              <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
-                <div>Пароль:</div>
-                <input class="input" type="password" placeholder="Password"
-                       v-model.trim="$v.password.$model"
-                >
-              </div>
+            <div class="btn__wrapper">
+              <button class="btn btn-main" type="submit" :disabled="submitStatus === 'PENDING'">
+                <span>Войти</span>
+              </button>
+            </div>
 
-              <div class="btn__wrapper">
-                <button class="btn btn-main" type="submit" :disabled="submitStatus === 'PENDING'">
-                  <span>Войти</span>
-                </button>
-              </div>
+            <p class="typo__p" v-if="submitStatus === 'ERROR'">Неверный логин или пароль.</p>
 
-              <p class="typo__p" v-if="submitStatus === 'ERROR'">Неверный логин или пароль.</p>
-
-              <div class="link">
-                <router-link
-                  :to="{ name: 'Reset' }"
-                  tag="div"
-                  class="link__right"
-                >
-                  Забыли пароль?
-                </router-link>
-              </div>
+            <div class="link">
+              <router-link
+                :to="{ name: 'Reset' }"
+                tag="div"
+                class="link__right"
+              >
+                Забыли пароль?
+              </router-link>
             </div>
           </div>
         </div>
-      </form>
 
+      </div>
 
-    </v-dialog>
-  </v-layout>
+    </form>
+  </v-dialog>
 </template>
 
 <script>
   import { required, minLength, email, maxLength } from 'vuelidate/lib/validators'
   import Registration from "./Registration";
+  import ClickOutside  from 'vue-click-outside'
 
   export default {
     name: 'Login',
     components: { Registration},
     data() {
       return {
+        opened: false,
         dialog: false,
         email: '',
         password: '',
@@ -114,11 +116,26 @@
           } catch (e) {}
         }
       },
-    }
+
+    },
+    directives: {
+      ClickOutside
+    },
   }
 </script>
 
 <style scoped lang="sass">
+  .kek
+    background: rgba(0, 0, 0, 0.5)
+    height: 100vh
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    &::v-deep
+      .v-dialog
+        border-radius: 0px !important
+
   .typo__p
     padding-bottom: 25px
     text-align: center
