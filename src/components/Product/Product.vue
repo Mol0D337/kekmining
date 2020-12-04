@@ -1,12 +1,12 @@
 <template>
   <div class="product">
-    <img src="../../assets/images/imgIcons/18.png" alt="">
-    <div class="product__title"><b>Bitcoin</b></div>
-    <div class="product__min">Minimal hashrate: <b>500 Gh/s</b></div>
-    <div class="product__pay">Payment for maintenance: <br/><b>0.0010000000 / 1 Gh/s / 1h</b></div>
-    <div class="product__equipment">Equipment: <b>SHA-256</b></div>
+    <img :src=" require('../../assets/images/imgIcons/' + product_data.image) " alt="">
+    <div class="product__title"><b>{{product_data.name}}</b></div>
+    <div class="product__min">Minimal hashrate: <b>{{product_data.min}}</b></div>
+    <div class="product__pay">Payment for maintenance: <br/><b>{{product_data.pay}}</b></div>
+    <div class="product__equipment">Equipment: <b>{{product_data.equipment}}</b></div>
     <input type="range" min="0" max="100" step="1" value="0">
-    <div class="product__price"><b>$250</b></div>
+    <div class="product__price"><b>{{product_data.price}}</b></div>
     <button class="btn btn-card">
       <span>Get started</span>
     </button>
@@ -30,22 +30,21 @@
 
 <style scoped lang="sass">
   .product
-    margin: 30px
+    margin: 20px
     text-align: center
     background: $color-white
-    width: 300px
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05)
     +reg
-    font-size: 15px
+    font-size: 18px
     line-height: 1.5
 
     &:hover
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15)
     img
-      margin-top: 15px
-      margin-bottom: 10px
+      margin-top: 40px
+      margin-bottom: 20px
     &__title
-      font-size: 20px
+      font-size: 23px
     &__min
       margin-top: 10px
       margin-bottom: 10px
@@ -57,7 +56,10 @@
     &__price
       margin-top: 20px
       margin-bottom: 15px
-      font-size: 20px
+      font-size: 23px
+
+  input
+    margin: 40px 0 40px
 
   .btn
     margin-bottom: 20px

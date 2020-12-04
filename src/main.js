@@ -6,7 +6,6 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import Vuelidate from 'vuelidate'
 import ClickOutside  from 'vue-click-outside'
-
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
