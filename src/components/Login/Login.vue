@@ -9,7 +9,6 @@
   >
     <template v-slot:activator="{ on }">
       <button class="btn btn-l"
-
               @click="dialog = true"
       >
         <span>entry</span>
@@ -123,8 +122,8 @@
           };
           try {
             await this.$store.dispatch('login', formData);
-            this.$router.push('/set');
             localStorage.setItem('userAuth', 'yes');
+            this.$router.push('/buy-hash');
           } catch (e) {}
         }
       },

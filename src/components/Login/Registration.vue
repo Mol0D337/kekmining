@@ -123,8 +123,8 @@
           };
           try {
             await this.$store.dispatch('register', formData);
-            this.$router.push('/set');
             localStorage.setItem('userAuth', 'yes');
+            this.$router.push('/buy-hash');
           } catch (e) {
           }
         }
