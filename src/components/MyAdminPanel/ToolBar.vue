@@ -3,22 +3,25 @@
     <div class="navigation" :class="openToolBar ? 'active' : ''">
       <div class="navigation__inner">
         <div class="logo">
-          <SvgIcon name="1"/>
+          <div class="logo__text">
+            Kek<span>mining</span>
+          </div>
         </div>
         <div class="avatar">
-          <img src="../../assets/images/imgPage/avatar.png" alt="">
+          <img src="../../assets/images/imgPage/avatar.jpg" alt="">
         </div>
         <div class="email"
              v-for="c of categories"
         >
           {{c.email}}
         </div>
-        <div>
+        <div class="links">
           <router-link
             tag="div"
             class="link"
             :to="{ name: 'BuyHash' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/11.png" alt="">
             Купить хэшрейт
           </router-link>
           <router-link
@@ -26,6 +29,7 @@
             class="link"
             :to="{ name: 'PersonalOffice' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/22.png" alt="">
             Личный кабинет
           </router-link>
           <router-link
@@ -33,6 +37,7 @@
             class="link"
             :to="{ name: 'Referrals' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/33.png" alt="">
             Рефералы
           </router-link>
           <router-link
@@ -40,6 +45,7 @@
             class="link"
             :to="{ name: 'History' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/88.png" alt="">
             История
           </router-link>
           <router-link
@@ -47,6 +53,7 @@
             class="link"
             :to="{ name: 'Wallets' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/66.png" alt="">
             Кошельки
           </router-link>
           <router-link
@@ -54,6 +61,7 @@
             class="link"
             :to="{ name: 'Transactions' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/77.png" alt="">
             Транзакции
           </router-link>
           <router-link
@@ -61,6 +69,7 @@
             class="link"
             :to="{ name: 'Settings' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/44.png" alt="">
             Настройки
           </router-link>
           <router-link
@@ -68,6 +77,7 @@
             class="link"
             :to="{ name: 'Help' }"
           >
+            <img class="icon" src="../../assets/images/imgPage/55.png" alt="">
             Помощь
           </router-link>
         </div>
@@ -168,4 +178,42 @@
       z-index: -1
       transition: all 300*1ms linear
 
+
+  .logo
+    margin-top: 20px
+    margin-bottom: 40px
+    +reg
+    font-size: 40px
+    text-align: center
+    &__text
+      color: #FFFFFF
+      span
+        color: #6af8ff
+
+  .avatar
+    text-align: center
+    margin-bottom: 15px
+
+    img
+      width: 100px
+      height: 100px
+      border-radius: 99px
+
+  .email
+    margin-bottom: 25px
+    +light
+    font-size: 16px
+    text-align: center
+    color: #FFFFFF
+    padding-bottom: 20px
+    border-bottom: 2px solid #222968
+
+
+  .links
+
+
+  .link
+    color: $color-white
+    +light
+    font-size: 16px
 </style>
