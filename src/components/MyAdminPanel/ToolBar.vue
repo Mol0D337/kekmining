@@ -209,11 +209,9 @@
     border-bottom: 2px solid #222968
 
 
-  .links
-
-
 
   .link
+    cursor: pointer
     display: flex
     align-items: center
     padding: 15px 0 15px 20px
