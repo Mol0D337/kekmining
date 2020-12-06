@@ -84,7 +84,7 @@
       </div>
     </div>
     <button id="show" @click="openToolBar = !openToolBar" :class="openToolBar ? 'active' : ''">
-      <SvgIcon style="width: 35px; height: 35px" name="31"/>
+      <SvgIcon style="width: 35px; height: 35px" :name="openToolBar ? '99' : '31'"/>
     </button>
   </div>
 </template>

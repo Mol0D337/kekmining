@@ -1,9 +1,16 @@
 <template>
   <div class="bcg">
     <NavBar/>
+
+    <div class="wrapper__content">
+      <div class="text"><b>Купить хэшрейт</b></div>
+
+      <Products style="padding-bottom: 100px"/>
+    </div>
+
+
+
     <ToolBar/>
-    <div class="text" style="margin: 0 auto; width: 1250px"><b>Купить хэшрейт</b></div>
-    <Products style="margin: 0 auto; width: 1250px; padding-bottom: 100px"/>
   </div>
 </template>
 
@@ -20,6 +27,10 @@
 <style scoped lang="sass">
   .bcg
     background: $color-grey
+
+  .wrapper__content
+    margin: 0 auto
+    width: 1250px
 
   .text
     padding: 30px 0 10px 20px
