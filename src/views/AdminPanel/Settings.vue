@@ -1,13 +1,21 @@
 <template>
-
+  <div class="bcg">
+    <NavBar/>
+    <ToolBar/>
+  </div>
 </template>
 
 <script>
+  import NavBar from "../../components/MyAdminPanel/NavBar";
+  import ToolBar from "../../components/MyAdminPanel/ToolBar";
   export default {
-    name: "Settings"
+    name: "Settings",
+    components: {ToolBar, NavBar}
   }
 </script>
 
-<style scoped>
+<style scoped lang="sass">
+  .bcg
+    background: $color-grey
 
 </style>

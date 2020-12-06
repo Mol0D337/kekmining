@@ -8,11 +8,6 @@ export default new VueRouter({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/test',
-      name: 'test',
-      component: () => import('../components/test.vue')
-    },
-    {
       path: '/',
       name: 'MainPage',
       component: () => import('../views/MainPage/MainPage.vue'),
