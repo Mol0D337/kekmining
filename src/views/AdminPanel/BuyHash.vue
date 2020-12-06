@@ -2,13 +2,8 @@
   <div class="bcg">
     <NavBar/>
     <ToolBar/>
-    <div class="inner">
-      <div class="text" style="margin: 0 auto; width: 1250px"><b>Купить хэшрейт</b></div>
-      <Products style="margin: 0 auto; width: 1250px; padding-bottom: 100px">
-
-      </Products>
-    </div>
-
+    <div class="text" style="margin: 0 auto; width: 1250px"><b>Купить хэшрейт</b></div>
+    <Products style="margin: 0 auto; width: 1250px; padding-bottom: 100px"/>
   </div>
 </template>
 
