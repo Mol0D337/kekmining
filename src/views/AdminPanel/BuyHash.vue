@@ -8,8 +8,6 @@
       <Products style="padding-bottom: 100px"/>
     </div>
 
-
-
     <ToolBar/>
   </div>
 </template>
