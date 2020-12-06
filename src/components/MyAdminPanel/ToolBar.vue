@@ -212,8 +212,19 @@
   .links
 
 
+
   .link
+    display: flex
+    align-items: center
+    padding: 15px 0 15px 20px
     color: $color-white
     +light
     font-size: 16px
+
+    img
+      margin-right: 15px
+
+  .link:hover
+    background: rgba(255, 255, 255, 0.1)
+    border-right: 3px solid #4bb5c5
 </style>
