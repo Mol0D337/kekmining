@@ -1,0 +1,63 @@
+{
+  "products": [
+    {
+      "image": "18.svg",
+      "name": "Bitcoin",
+      "min": "500 Gh/s",
+      "pay": "0.0010000000 / 1 Gh/s / 1h",
+      "equipment": "SHA-256",
+      "price": "$250",
+      "article": "T1",
+      "available": true
+    },
+    {
+      "image": "17.svg",
+      "min": "1150 Mh/s",
+      "pay": "0.0010000000 / 1 Mh/s / 1h",
+      "equipment": "X11 (DASH)",
+      "price": "$450",
+      "article": "T2",
+      "available": true
+    },
+    {
+      "image": "16.svg",
+      "name": "Ethereum",
+      "min": "50 Mh/s",
+      "pay": "0.0010000000 / 1 Mh/s / 1h",
+      "equipment": "ETHASH",
+      "price": "$20",
+      "article": "T3",
+      "available": true
+    },
+    {
+      "image": "19.svg",
+      "name": "Litecoin",
+      "min": "2500 Mh/s",
+      "pay": "0.0010000000 / 1 Mh/s / 1h",
+      "equipment": "Scrypt",
+      "price": "$2500",
+      "article": "T4",
+      "available": true
+    },
+    {
+      "image": "20.svg",
+      "name": "Zcash",
+      "min": "1000 H/s",
+      "pay": "0.0010000000 / 1 H/s / 1h",
+      "equipment": "EQUEHASH (ZEC)",
+      "price": "$60",
+      "article": "T5",
+      "available": true
+    },
+    {
+      "image": "21.svg",
+      "name": "Monero",
+      "min": "25 H/s",
+      "pay": "0.0000571667 / 1 H/s / 1h",
+      "equipment": "Cryptonight (XMR)",
+      "price": "$13",
+      "article": "T6",
+      "available": true
+    }
+  ]
+}
