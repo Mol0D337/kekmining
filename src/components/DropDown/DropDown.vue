@@ -3,6 +3,7 @@
   <div class="drop__down">
     <div class="drop__down-top" @click="openDropDown = !openDropDown">
       <div class="drop__down-title"><b>{{title}}</b></div>
+
       <svg-icon :name="openDropDown ? '101' : '48'"/>
     </div>
     <div class="drop__down-bottom" v-show="openDropDown">

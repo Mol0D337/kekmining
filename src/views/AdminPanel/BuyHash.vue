@@ -2,6 +2,7 @@
   <div class="bcg">
     <NavBar/>
 
+
     <div class="wrapper__content">
       <div class="text"><b>Купить хэшрейт</b></div>
 
