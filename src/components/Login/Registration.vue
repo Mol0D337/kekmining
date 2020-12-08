@@ -12,7 +12,7 @@
         class="btn btn-r"
         @click="dialog = true"
       >
-        <span>registration</span>
+        <span>{{$t('header.registration')}}</span>
       </button>
     </template>
 
@@ -21,7 +21,7 @@
 
         <div class="modal__top">
           <img src="../../assets/images/backgroundM/5.svg" alt="">
-          <div class="modal__title">Регистрация учасников</div>
+          <div class="modal__title">{{$t('entry.regForUser')}}</div>
 
           <div class="clear" @click="closeModal">&times;</div>
 
@@ -31,26 +31,26 @@
           <div class="modal__bottom-wrapper">
 
             <div class="inputs" :class="{ 'form-group--error': $v.name.$error }">
-              <div>Имя:</div>
+              <div>{{$t('entry.name')}}</div>
               <input class="input" type="text" v-model.trim="$v.name.$model">
             </div>
 
             <div class="inputs" :class="{ 'form-group--error': $v.email.$error }">
-              <div>Электронный адрес:</div>
+              <div>{{$t('entry.email')}}</div>
               <input class="input" type="text"
                      v-model.trim="$v.email.$model"
               >
             </div>
 
             <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
-              <div>Пароль:</div>
+              <div>{{$t('entry.password')}}</div>
               <input class="input" type="password"
                      v-model.trim="$v.password.$model"
               >
             </div>
 
             <div class="inputs" :class="{ 'form-group--error': $v.repeatPassword.$error }">
-              <div>Повторите пароль:</div>
+              <div>{{$t('entry.repeatPassword')}}</div>
               <input class="input" type="password"
                      v-model.trim="$v.repeatPassword.$model"
               >
@@ -58,11 +58,11 @@
 
             <div class="btn__wrapper">
               <button class="btn btn-main" type="submit" :disabled="submitStatus === 'PENDING'">
-                <span>Зарегистрироваться</span>
+                <span>{{$t('entry.registration')}}</span>
               </button>
             </div>
 
-            <p class="typo__p" v-if="submitStatus === 'ERROR'">Что то пошло не так((</p>
+            <p class="typo__p" v-if="submitStatus === 'ERROR'">{{$t('entry.error')}}</p>
 
           </div>
         </div>
@@ -173,8 +173,10 @@
       justify-content: center
       align-items: center
       position: absolute
-      top: 35px
-      left: 22%
+      top: 0
+      left: 0
+      right: 0
+      bottom: 25%
 
     &__bottom
       width: 320px

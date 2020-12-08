@@ -4,35 +4,36 @@
       <div class="wrapper">
         <div class="wrapper__header">
           <div class="header">
-            <div class="logotype">
-              <img src="../../assets/images/imgIcons/1.png" alt="">
+            <div class="logo">
+              <div class="logo__text">
+                Kek<span>mining</span>
+              </div>
             </div>
             <ul>
-              <li><a href="#">ABOUT US</a></li>
-              <li><a href="#">POSSIBILITIES</a></li>
-              <li><a href="#">PRICE</a></li>
-              <li><a href="#">TESTIMONIALS</a></li>
+              <li><a href="#">{{$t('header.aboutUs')}}</a></li>
+              <li><a href="#">{{$t('header.possibilities')}}</a></li>
+              <li><a href="#">{{$t('header.price')}}</a></li>
+              <li><a href="#">{{$t('header.testimonials')}}</a></li>
               <li>
                 <Registration/>
               </li>
               <li>
                 <Login/>
               </li>
-              <li><a href="#">EN</a></li>
+              <li><a href="#" @click="setLocale('en')">EN</a></li>
+              <li><a href="#" @click="setLocale('ru')">RU</a></li>
             </ul>
           </div>
         </div>
         <div class="about">
           <div class="title">
-            start mining production with industry leaders
+            {{$t('info.title')}}
           </div>
           <div class="title__sub">
-            We make industrial mining accessible to all. You get access
-            to the latest and most advanced technologies in the industry
-            provided by the leading company.
+            {{$t('info.subTitle')}}
           </div>
           <button class="btn btn-main">
-            <span>Get started</span>
+            <span>{{$t('info.button')}}</span>
           </button>
         </div>
         <div class="scroll">
@@ -46,7 +47,7 @@
       <div class="wrapper__possibilities">
         <div class="possibilities">
           <div class="possibilities__title">
-            Three simple steps for startup of mining
+            {{$t('steps.title')}}
           </div>
           <div class="svgs">
             <div class="svg">
@@ -57,6 +58,10 @@
           </div>
           <SvgIcon
             class="border"
+            style="width: 90%;
+                  height: 40px;
+                  text-align: center;
+                  margin-top: 20px;"
             name="32"/>
           <div class="cycles">
             <div class="cycle">
@@ -70,9 +75,9 @@
             </div>
           </div>
           <div class="sub-title">
-            <div class="sub">Registration</div>
-            <div class="sub">Choose a payment plan</div>
-            <div class="sub">Get coins</div>
+            <div class="sub">{{$t('steps.registration')}}</div>
+            <div class="sub">{{$t('steps.payment')}}</div>
+            <div class="sub">{{$t('steps.coins')}}</div>
           </div>
         </div>
 
@@ -81,7 +86,7 @@
       <div class="wrapper__video">
         <div class="video">
           <div class="possibilities__title">
-            Video title
+            {{$t('steps.video')}}
           </div>
           <div class="iframe">
             <img src="../../assets/images/backgroundD/video.png" alt="">
@@ -92,7 +97,7 @@
       <div class="bcg">
         <div class="wrapper__product">
           <div class="possibilities__title">
-            What is the price of our capacities?
+            {{$t('steps.cardTitle')}}
           </div>
           <Products/>
         </div>
@@ -100,18 +105,15 @@
         <div class="wrapper__about">
           <div class="about-us">
             <div class="about-us__title">
-              About us
+              {{$t('about.aboutUs')}}
             </div>
             <div class="flex">
               <div class="flex__text">
                 <div class="about-us__subtitle">
-                  Why us?
+                  {{$t('about.WhyUs')}}
                 </div>
                 <div class="about-us__text">
-                  Kekmining is a modern approach, the most innovative systems and the maximum ease of use.
-                  Now speaking about mining, you should not think about buying and setting up expensive
-                  equipment, it's enough to choose the necessary speed, to distribute assets and get the
-                  maximum income.
+                  {{$t('about.text')}}
                 </div>
               </div>
               <div class="flex__img">
@@ -128,7 +130,7 @@
         <div class="wrapper__adv">
           <div class="adv">
             <div class="possibilities__title">
-              Our advantages
+              {{$t('advantages.ourAdvantages')}}
             </div>
             <div class="adv__icons">
               <img src="../../assets/images/imgIcons/22.png" alt="">
@@ -138,15 +140,15 @@
               <img src="../../assets/images/imgIcons/26.png" alt="">
             </div>
             <div class="adv__texts">
-              <div class="adv__text">Instant connection</div>
-              <div class="adv__text">Uninterrupted operation</div>
-              <div class="adv__text">Fixed commission</div>
-              <div class="adv__text">Best statistical base</div>
-              <div class="adv__text">Instant withdrawal</div>
+              <div class="adv__text">{{$t('advantages.instant')}}</div>
+              <div class="adv__text">{{$t('advantages.uninterrupted')}}</div>
+              <div class="adv__text">{{$t('advantages.fixed')}}</div>
+              <div class="adv__text">{{$t('advantages.best')}}</div>
+              <div class="adv__text">{{$t('advantages.instantWith')}}</div>
             </div>
             <div class="wb">
               <button class="btn btn-main">
-                <span>Get started</span>
+                <span>{{$t('info.button')}}</span>
               </button>
             </div>
           </div>
@@ -155,7 +157,7 @@
         <div class="wrapper__figures">
           <div class="figures">
             <div class="possibilities__title">
-              Figures and Facts
+              {{$t('advantages.figures')}}
             </div>
 
             <div class="figures__img">
@@ -167,12 +169,10 @@
 
                 <div class="figures__text">
                   <div class="figures__text-left">
-                    Since 2014, our company has been continuously growing and
-                    bringing constant income to customers.
+                    {{$t('advantages.text1')}}
                   </div>
                   <div class="figures__text-left">
-                    In 2014 it was a small unit in Kiev, now we are aimed
-                    at the whole world!
+                    {{$t('advantages.text2')}}
                   </div>
                 </div>
               </div>
@@ -185,12 +185,10 @@
                 </div>
                 <div class="figures__text">
                   <div class="figures__text-left">
-                    Reputation above all
+                    {{$t('advantages.text3')}}
                   </div>
                   <div class="figures__text-left">
-                    We adhere to an open policy of work. Honesty, dignity, an agreement
-                    without subtext. No hidden commissions and compensation.
-                    The withdrawal is at any time.
+                    {{$t('advantages.text4')}}
                   </div>
                 </div>
               </div>
@@ -210,19 +208,19 @@
           <div class="wrapper__footer">
             <div class="footer__top">
               <ul class="ul">
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">POSSIBILITIES</a></li>
-                <li><a href="#">PRICE</a></li>
-                <li><a href="#">TESTIMONIALS</a></li>
-                <li><a href="#">ENTER</a></li>
-                <li><a href="#">REGISTRATION</a></li>
+                <li><a href="#">{{$t('header.aboutUs')}}</a></li>
+                <li><a href="#">{{$t('header.possibilities')}}</a></li>
+                <li><a href="#">{{$t('header.price')}}</a></li>
+                <li><a href="#">{{$t('header.testimonials')}}</a></li>
+                <li><a href="#">{{$t('header.registration')}}</a></li>
+                <li><a href="#">{{$t('header.entry')}}</a></li>
               </ul>
             </div>
           </div>
         </div>
 
         <div class="footer__bottom">
-          All rigths reserved &copy; Kekmining 2020
+          {{$t('advantages.reserved')}} &copy; Kekmining 2020
         </div>
 
       </div>
@@ -250,12 +248,26 @@ export default {
     Registration,
     Login,
   },
-
-
+  methods: {
+    setLocale(locale) {
+      import(`../../locales/${locale}.json`).then((msgs) => {
+        this.$i18n.setLocaleMessage(locale, msgs);
+        this.$i18n.locale = locale;
+      })
+    },
+  }
 }
 </script>
 
 <style scoped lang="sass">
+  .logo
+    +reg
+    font-size: 40px
+    text-align: center
+    &__text
+      color: #FFFFFF
+      span
+        color: #6af8ff
 
   .svg-icon
     width: 20px
@@ -292,6 +304,7 @@ export default {
     justify-content: space-between
 
     ul
+      text-transform: uppercase
       display: flex
       align-items: center
       li
@@ -361,12 +374,6 @@ export default {
     justify-content: space-between
     align-items: center
 
-  .border
-    width: 90%
-    height: 40px
-    text-align: center
-    margin-top: 20px
-
   .cycles
     width: 90%
     display: flex
@@ -389,7 +396,7 @@ export default {
       justify-content: center
       position: absolute
       top: 24%
-      left: 26%
+      left: 24%
       text-align: center
       width: 16px
       height: 16px
@@ -556,6 +563,7 @@ export default {
     justify-content: space-between
 
   .ul
+    text-transform: uppercase
     display: flex
     align-items: center
     list-style: none

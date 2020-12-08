@@ -2,9 +2,8 @@
   <div class="bcg">
     <NavBar/>
 
-
     <div class="wrapper__content">
-      <div class="text"><b>Купить хэшрейт</b></div>
+      <div class="text"><b>{{$t('any.buyHash')}}</b></div>
 
       <Products style="padding-bottom: 100px"/>
     </div>

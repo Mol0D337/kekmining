@@ -3,25 +3,18 @@
     <Tool-bar/>
 
     <div class="nav__bar">
-      <div class="sel" @click="selectLang = !selectLang">
+      <div class="sel" >
         <SvgIcon style="width: 35px; height: 35px" name="37"/>
-        <div class="nav__bar-text"><b>{{selected}}</b></div>
-        <div class="column"
-          v-if="selectLang"
-        >
-          <div class="nav"
-               v-for="element in lang"
-               :key="element.value"
-               @click="selectOption(element)"
-          >
-            <b>{{element.name}}</b>
-          </div>
+        <div class="local">
+          <div class="nav__bar-text" style="border-right: 2px solid black; padding-right: 10px"
+               @click="setLocale('ru')"
+          ><b>RU</b></div>
+          <div class="nav__bar-text" @click="setLocale('en')"><b>EN</b></div>
         </div>
-        <SvgIcon style="cursor: pointer" name="48"/>
       </div>
 
       <SvgIcon style="width: 35px; height: 35px; " name="36"/>
-      <div @click.prevent="logout" class="nav__bar-text"><b>Выйти</b></div>
+      <div @click.prevent="logout" class="nav__bar-text"><b>{{$t('any.logout')}}</b></div>
     </div>
 
   </div>
@@ -35,14 +28,7 @@
     components: {ToolBar, SvgIcon},
     data() {
       return {
-        selectLang: false,
-        selected: 'Язык',
-        lang: [
-          {name: 'RU'},
-          {name: 'UK'},
-          {name: 'IT'},
-          {name: 'EN'},
-        ]
+
       }
     },
     methods: {
@@ -51,8 +37,11 @@
         localStorage.setItem('userAuth', 'no');
         this.$router.push('/');
       },
-      selectOption(element) {
-        this.selected = element.name;
+      setLocale(locale) {
+        import(`../../locales/${locale}.json`).then((msgs) => {
+          this.$i18n.setLocaleMessage(locale, msgs);
+          this.$i18n.locale = locale;
+        })
       },
     },
   }
@@ -64,12 +53,17 @@
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 5px 60px 0 10px
+    padding: 5px 50px 0 10px
 
   .nav
     cursor: pointer
     +reg
     font-size: 15px
+
+  .local
+    display: flex
+    justify-content: space-between
+    align-items: center
 
   .nav__bar
     display: flex
@@ -77,6 +71,7 @@
 
     &-text
       cursor: pointer
+      margin-right: 10px
       +reg
       font-size: 15px
 

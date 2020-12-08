@@ -5,17 +5,16 @@
     <div class="wrapper__help">
 
       <DropDown
-        title='Коды'
+        :title="$t('any.codes')"
         :initial-value="true"
       >
-        <div>124124124</div>
+        <div>{{$t('form.hello')}}</div>
       </DropDown>
 
       <DropDown
-        title='Коды'
-        :initial-value="false"
+        :title="$t('any.codes')"
       >
-        <div>{{$t('form.hello')}}</div>
+        <div>12414124</div>
       </DropDown>
 
     </div>

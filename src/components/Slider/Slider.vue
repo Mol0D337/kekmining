@@ -1,7 +1,7 @@
 <template>
   <div class="slider">
     <div class="title">
-      What do people think of us?
+      {{$t('advantages.titleSlider')}}
     </div>
 
     <div class="inner">

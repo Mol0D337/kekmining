@@ -9,12 +9,13 @@ import ClickOutside  from 'vue-click-outside'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
-import i18n from './i18n'
+import {i18n} from './i18n'
+
 
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 firebase.initializeApp ({
   apiKey: "AIzaSyA9TaIG1UJBhwIn1QMeke5QfoOmHikpnDo",

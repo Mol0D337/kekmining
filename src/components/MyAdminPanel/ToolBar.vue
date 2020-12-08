@@ -22,7 +22,7 @@
             :to="{ name: 'BuyHash' }"
           >
             <img class="icon" src="../../assets/images/imgPage/11.png" alt="">
-            Купить хэшрейт
+            {{$t('any.buyHash')}}
           </router-link>
           <router-link
             tag="div"
@@ -30,7 +30,7 @@
             :to="{ name: 'PersonalOffice' }"
           >
             <img class="icon" src="../../assets/images/imgPage/22.png" alt="">
-            Личный кабинет
+            {{$t('any.personalOffice')}}
           </router-link>
           <router-link
             tag="div"
@@ -38,7 +38,7 @@
             :to="{ name: 'Referrals' }"
           >
             <img class="icon" src="../../assets/images/imgPage/33.png" alt="">
-            Рефералы
+            {{$t('any.referrals')}}
           </router-link>
           <router-link
             tag="div"
@@ -46,7 +46,7 @@
             :to="{ name: 'History' }"
           >
             <img class="icon" src="../../assets/images/imgPage/88.png" alt="">
-            История
+            {{$t('any.history')}}
           </router-link>
           <router-link
             tag="div"
@@ -54,7 +54,7 @@
             :to="{ name: 'Wallets' }"
           >
             <img class="icon" src="../../assets/images/imgPage/66.png" alt="">
-            Кошельки
+            {{$t('any.wallets')}}
           </router-link>
           <router-link
             tag="div"
@@ -62,7 +62,7 @@
             :to="{ name: 'Transactions' }"
           >
             <img class="icon" src="../../assets/images/imgPage/77.png" alt="">
-            Транзакции
+            {{$t('any.transactions')}}
           </router-link>
           <router-link
             tag="div"
@@ -70,7 +70,7 @@
             :to="{ name: 'Settings' }"
           >
             <img class="icon" src="../../assets/images/imgPage/44.png" alt="">
-            Настройки
+            {{$t('any.settings')}}
           </router-link>
           <router-link
             tag="div"
@@ -78,7 +78,7 @@
             :to="{ name: 'Help' }"
           >
             <img class="icon" src="../../assets/images/imgPage/55.png" alt="">
-            Помощь
+            {{$t('any.help')}}
           </router-link>
         </div>
       </div>
