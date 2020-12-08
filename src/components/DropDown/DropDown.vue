@@ -23,11 +23,20 @@
         type: String,
         default: '',
       },
+      initialValue: {
+        type: Boolean,
+        required: false,
+        default: false
+      }
     },
     data() {
       return {
-        openDropDown: true,
+        openDropDown: false,
       }
+    },
+
+    created () {
+      this.openDropDown = this.initialValue;
     }
   }
 </script>

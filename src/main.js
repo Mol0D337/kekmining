@@ -9,6 +9,7 @@ import ClickOutside  from 'vue-click-outside'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
+import i18n from './i18n'
 
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
@@ -34,6 +35,7 @@ firebase.auth().onAuthStateChanged(() => {
       router,
       store,
       vuetify,
+      i18n,
       render: h => h(App)
     }).$mount('#app');
   }

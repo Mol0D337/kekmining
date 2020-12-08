@@ -6,8 +6,16 @@
 
       <DropDown
         title='Коды'
+        :initial-value="true"
       >
         <div>124124124</div>
+      </DropDown>
+
+      <DropDown
+        title='Коды'
+        :initial-value="false"
+      >
+        <div>{{$t('form.hello')}}</div>
       </DropDown>
 
     </div>
