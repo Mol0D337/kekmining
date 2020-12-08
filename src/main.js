@@ -14,7 +14,7 @@ import i18n from './i18n'
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 firebase.initializeApp ({
   apiKey: "AIzaSyA9TaIG1UJBhwIn1QMeke5QfoOmHikpnDo",
