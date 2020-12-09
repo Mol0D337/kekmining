@@ -102,7 +102,33 @@
     "city": "City",
     "region": "Region",
     "country": "Country",
-    "postCode": "Postcode"
-
+    "postCode": "Postcode",
+    "help": "Help"
+  },
+  "questions": {
+    "question1": "What cryptocurrencies are mined through your service?",
+    "question2": "How long is the contract valid?",
+    "question3": "How do I verify my credit card with Payeer?",
+    "question4": "My purchase status is Pending, Rejected or Canceled",
+    "question5": "How to calculate the profit depending on the capacity?",
+    "question6": "What affects my income and profit?",
+    "question7": "I bought a hash, when will the charges be?",
+    "question8": "Conclusions: currencies and commission",
+    "question9": "Is a negative account balance possible?",
+    "question10": "How to create a Bitcoin wallet?",
+    "question11": "Do you accept credit cards?",
+    "question12": "How to create a DASH wallet?",
+    "question13": "How does the allocation of capacity across pools work / work?",
+    "question14": "Email confirmation not received, what should I do?",
+    "question15": "I forgot my password, what should I do?",
+    "question16": "Can I delete my Kekmining account?",
+    "question17": "How does the Kekemining referral program work?",
+    "question18": "How do I reset 2FA?",
+    "question19": "Zcash address, withdrawals and wallet",
+    "question20": "How to withdraw funds?"
+  },
+  "answers": {
+    "answer1": "The current term for SHA-256 and SCRYPT contracts is 365 days, and they also imply a separate fee for electricity and maintenance. ETHASH, EQUIHASH and DASH contracts do not require additional fees.",
+    "answer2": "To order power from us, just purchase a Hashrate, for this you need to determine its quantity in the menu in advance, and put a tick in front of the license agreement. Next, you select a payment method, and it is bitcoin, credit card or bank transfer."
   }
 }
