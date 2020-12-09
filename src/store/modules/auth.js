@@ -67,6 +67,7 @@ export default {
             name: rootState.info.name,
             surname: rootState.info.surname,
             birth: rootState.info.birth,
+            company: rootState.info.company,
             companyCode: rootState.info.companyCode,
             inn: rootState.info.inn,
             address1: rootState.info.address1,
@@ -79,6 +80,28 @@ export default {
           };
           await firebase.database().ref(`/users/${uid}/info`).update(editAll)
         },
+
+        // async updateCategoryLOL({ dispatch, rootState}, {payload}) {
+        //   const {name = null,surname = null, birth = null,company = null,companyCode = null,inn = null,
+        //     address1 = null,address2 = null,city = null,region = null,country = null,postCode = null,} = payload;
+        //   const uid = await dispatch('getuid');
+        //   const data = {};
+        //   if (name) data.name = name;
+        //   if (surname) data.name = surname;
+        //   if (birth) data.name = birth;
+        //   if (company) data.name = company;
+        //   if (companyCode) data.name = companyCode;
+        //   if (inn) data.name = inn;
+        //   if (address1) data.name = address1;
+        //   if (address2) data.name = address2;
+        //   if (city) data.name = city;
+        //   if (region) data.name = region;
+        //   if (country) data.name = country;
+        //   if (postCode) data.name = postCode;
+        //   const res = await firebase.database().ref(`/users/${uid}/info`).update(data);
+        //
+        //   commit('SET_USER', res.data);
+        // },
 
 
         async updateCategory2({ dispatch, rootState}) {
@@ -133,7 +156,8 @@ export default {
           const editImage = {
             image: rootState.info.image
           };
-          await firebase.database().ref(`/users/${uid}/info`).update(editImage);
+          await firebase.storage().ref(`/users/${uid}/info.${imageExt}`).put(editImage);
+          await firebase.database().ref(`/users/${uid}/info.${imageExt}`).update(editImage);
         },
 
         async fetchCategories({ dispatch}) {
