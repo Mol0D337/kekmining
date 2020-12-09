@@ -2,12 +2,12 @@
 
   <div class="drop__down">
     <div class="drop__down-top" @click="openDropDown = !openDropDown">
-      <div class="drop__down-title"><b>{{title}}</b></div>
+      <div class="drop__down-title" ><b>{{title}}</b></div>
 
       <svg-icon :name="openDropDown ? '101' : '48'"/>
     </div>
     <div class="drop__down-bottom" v-show="openDropDown">
-      <slot></slot>
+      <slot class="slot"></slot>
     </div>
   </div>
 
@@ -56,15 +56,16 @@
     font-size: 20px
     background-color: #FFFFFF
     padding: 15px 15px
+    margin-right: 20px
+    margin-left: 20px
 
   .drop__down-bottom
     margin-top: 2px
     +semiB
     background-color: #FFFFFF
     font-size: 16px
-    padding: 15px 15px
-    width: 100%
-    height: 100%
+    margin-right: 20px
+    margin-left: 20px
 
 
 </style>

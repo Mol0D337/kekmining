@@ -10,10 +10,12 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 import {i18n} from './i18n'
+import Loader from '@/components/Loader/Loader'
 
 
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
+Vue.component('Loader', Loader);
 
 Vue.config.productionTip = false;
 

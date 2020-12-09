@@ -61,7 +61,7 @@
     "equipment": "Equipment:",
     "button": "Get started"
   },
-  "any":{
+  "any": {
     "logout": "Log off",
 
     "buyHash": "Buy hashrate",
@@ -72,6 +72,37 @@
     "transactions": "Transactions",
     "settings": "Settings",
     "help": "Help",
-    "codes": "Codes"
+    "codes": "Codes",
+    "profile": "Profile",
+    "email": "Email address",
+    "password": "Password",
+    "avatar": "Avatar",
+    "btc": "BTC purse",
+    "eth": "ETH purse",
+    "dash": "DASH purse",
+    "zec": "ZEC purse",
+
+    "save": "Save",
+    "alert": "Change of wallet address blocks withdrawals for a period of 2 weeks after confirmation, for security reasons",
+    "bitcoin": "How to create a Bitcoin wallet?",
+    "ethereum": "How to create an Ethereum wallet?",
+    "dashW": "How to create a DASH wallet?",
+    "zcash": "How to create a Zcash wallet?",
+    "avatarText": "Click to upload a photo.",
+    "data": "Contact details",
+
+    "name": "Name",
+    "surname": "Surname",
+    "birth": "Data of Birth",
+    "company": "Company",
+    "companyCode": "Company Code",
+    "inn": "INN",
+    "address1": "Address 1",
+    "address2": "Address 2",
+    "city": "City",
+    "region": "Region",
+    "country": "Country",
+    "postCode": "Postcode"
+
   }
 }

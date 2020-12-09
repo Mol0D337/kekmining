@@ -37,7 +37,7 @@
 
             <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
               <div>{{$t('entry.password')}}</div>
-              <input class="input" type="password" placeholder="Password"
+              <input class="input" type="password" :placeholder="$t('any.password')"
                      v-model.trim="$v.password.$model"
               >
             </div>
