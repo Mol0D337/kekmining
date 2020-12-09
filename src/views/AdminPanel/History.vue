@@ -1,6 +1,13 @@
 <template>
   <div class="bcg">
     <NavBar/>
+
+    <div style="padding-bottom: 1000px">
+      <label>English DatePicker :</label>
+
+
+    </div>
+
     <ToolBar/>
   </div>
 </template>
@@ -9,7 +16,12 @@
   import ToolBar from "../../components/MyAdminPanel/ToolBar";
   export default {
     name: "History",
-    components: {ToolBar, NavBar}
+    components: {ToolBar, NavBar},
+    data() {
+      return {
+        date: ''
+      };
+    },
   }
 </script>
 

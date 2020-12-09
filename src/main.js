@@ -11,8 +11,9 @@ import 'firebase/auth'
 import 'firebase/database'
 import {i18n} from './i18n'
 import Loader from '@/components/Loader/Loader'
+import VueEnglishdatepicker from "vue-englishdatepicker";
 
-
+Vue.use(VueEnglishdatepicker);
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
 Vue.component('Loader', Loader);

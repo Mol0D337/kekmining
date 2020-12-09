@@ -192,7 +192,7 @@
                   <form action="" @submit.prevent="allHandler">
                     <input class="input" type="text" v-for="c of categories" :placeholder="c.name" v-model="name">
                     <input class="input" type="text" v-for="c of categories" :placeholder="c.surname" v-model="surname">
-                    <input class="input" type="text" v-for="c of categories" :placeholder="c.birth" v-model="birth">
+                    <vue-englishdatepicker class="input" v-for="c of categories" :placeholder="c.birth" v-model="birth"/>
                     <input class="input" type="text" v-for="c of categories" :placeholder="c.company" v-model="company">
                     <input class="input" type="text" v-for="c of categories" :placeholder="c.companyCode" v-model="companyCode">
                     <input class="input" type="text" v-for="c of categories" :placeholder="c.inn" v-model="inn">

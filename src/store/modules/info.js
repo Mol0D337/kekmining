@@ -93,6 +93,7 @@ export default {
       getName: s => s.name,
       getSurName: s => s.surname,
       getBirth: s => s.birth,
+      getCompany: s => s.company,
       getCompanyCode: s => s.companyCode,
       getInn: s => s.inn,
       getAddress1: s => s.address1,
