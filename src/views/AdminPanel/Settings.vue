@@ -167,7 +167,6 @@
             </div>
           </DropDown>
 
-
           <DropDown
             :title="$t('any.data')"
             :initial-value="true"
@@ -522,7 +521,7 @@
   .wrapper__content
     margin: 0 auto
     width: 1250px
-    padding: 30px 0 100px 0
+    padding: 30px 0 80px 0
 
   .text
     padding: 0 0 40px 20px

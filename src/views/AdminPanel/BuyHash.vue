@@ -1,14 +1,19 @@
 <template>
   <div class="bcg">
-    <NavBar/>
+    <loader class="loader" v-if="loading"/>
 
-    <div class="wrapper__content">
-      <div class="text"><b>{{$t('any.buyHash')}}</b></div>
+    <div v-else>
+      <NavBar/>
 
-      <Products style="padding-bottom: 100px"/>
+      <div class="wrapper__content">
+        <div class="text"><b>{{$t('any.buyHash')}}</b></div>
+
+        <Products style="padding-bottom: 100px"/>
+      </div>
+
+      <ToolBar/>
     </div>
 
-    <ToolBar/>
   </div>
 </template>
 
@@ -18,11 +23,24 @@
   import Products from "../../components/Product/Products";
   export default {
     name: "BuyHash",
-    components: {Products, ToolBar, NavBar}
+    components: {Products, ToolBar, NavBar},
+    data: () => ({
+      loading: true,
+    }),
+    mounted() {
+      this.loading = false
+    }
   }
 </script>
 
 <style scoped lang="sass">
+  .loader
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+
   .bcg
     background: $color-grey
 

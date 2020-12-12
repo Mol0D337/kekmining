@@ -43,8 +43,7 @@
 
 <style scoped lang="sass">
   .drop__down
-    width: 100%
-    height: 100%
+    margin-bottom: 20px
 
   .drop__down-top
     user-select: none
@@ -66,6 +65,5 @@
     font-size: 16px
     margin-right: 20px
     margin-left: 20px
-
 
 </style>
