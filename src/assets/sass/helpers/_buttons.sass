@@ -1,78 +1,72 @@
 .btn
   border-radius: 99px
   cursor: pointer
-
-  &:active
-    outline: none
-
-  &:focus
-    outline: none
+  outline: none
 
 
-.btn-card
-  width: 200px
-  height: 50px
-  border-radius: 99px
-  border: 2px solid $color-black
-  background: $color-white
-  //background: #409caa
-
-  &:hover
-    border: none
-    background: $color-turquoise
-
-  &:hover span
-    color: $color-white
-
-  span
-    color: $color-black
-    font-size: $font-size--l
-    +reg
-
-
-.btn-menu-color
-  background: $color-turquoise
-  border: 2px solid transparent
-  padding: 10px 20px
-
-  &:hover
+  &-card
+    width: 200px
+    height: 50px
+    border-radius: 99px
+    border: 2px solid $color-black
     background: $color-white
-    border: 2px solid $color-turquoise
-    transition: .2s
+    //background: #409caa
 
-  &:hover span
-    color: $color-turquoise
-    transition: .2s
+    &:hover
+      border: none
+      background: $color-turquoise
 
-  &:not(:hover)
-    transition: .2s
+    &:hover span
+      color: $color-white
 
-  span
-    color: $color-white
-    +reg
-    font-size: $font-size--ls
+    span
+      color: $color-black
+      font-size: $font-size--l
+      +reg
 
 
-.btn-menu-border
-  background: $color-white
-  border: 2px solid $color-turquoise
-  padding: 10px 20px
-
-  &:hover
+  &-menu-color
     background: $color-turquoise
     border: 2px solid transparent
-    transition: .2s
+    padding: 10px 20px
+    transition: background .2s ease-in-out, color .2s ease-in-out
 
-  &:hover span
-    color: $color-white
-    transition: .2s
-  &:not(:hover)
-    transition: .2s
+    &:hover
+      background: $color-white
+      border: 2px solid $color-turquoise
 
-  span
-    color: $color-turquoise
-    +reg
-    font-size: $font-size--ls
+    &:hover span
+      color: $color-turquoise
+
+    &:not(:hover)
+      transition: .2s
+
+    span
+      color: $color-white
+      +reg
+      font-size: $font-size--ls
+
+
+  &-menu-border
+    background: $color-white
+    border: 2px solid $color-turquoise
+    padding: 10px 20px
+    transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out
+
+    &:hover
+      background: $color-turquoise
+      border: 2px solid transparent
+
+    &:hover span
+      color: $color-white
+
+    &:not(:hover)
+      transition: .2s
+
+    span
+      color: $color-turquoise
+      +reg
+      font-size: $font-size--ls
 
 
 .btn-table-1
