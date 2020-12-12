@@ -9,10 +9,8 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: () => import('../views/Home.vue')
+      name: 'MainPage',
+      component: () => import('../views/MainPage.vue')
     },
   ]
 })
-
-

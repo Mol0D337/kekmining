@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="140mm" height="96mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 14000 9600"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="632" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Open Sans">
+		<font-face-src>
+			<font-face-name name="Open Sans"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="v" horiz-adv-x="500" d="M203.157 0l-203.157 535.008 87.002 0 115.174 -317.35c25.9916,-74.1589 41.3205,-122.326 45.8342,-144.502l3.99032 0c3.4888,17.335 14.8274,53.008 33.8414,107.172 19.1666,54.1637 61.8172,172.5 128.148,354.68l87.002 0 -203.157 -535.008 -94.6774 0z"/>
+   <glyph unicode="e" horiz-adv-x="560" d="M312.008 -10.0085c-79.174,0 -141.515,24.1818 -187.174,72.3491 -45.8342,48.1673 -68.664,115.152 -68.664,200.824 0,86.3261 21.1727,154.837 63.6707,205.665 42.498,50.8275 99.4963,76.1649 171.169,76.1649 66.985,0 120.167,-22.0013 159.155,-66.1564 39.0092,-44.177 58.6773,-102.331 58.6773,-174.506l0 -51.329 -368.679 0c1.67899,-62.8421 17.5094,-110.508 47.5131,-143.172 30.1563,-32.4895 72.5017,-48.8214 127.32,-48.8214 57.4998,0 114.498,11.9928 170.842,36.1527l0 -72.3272c-28.6736,-12.4943 -55.8427,-21.3253 -81.3327,-26.842 -25.5119,-5.32042 -56.3442,-8.00244 -92.4969,-8.00244zm-22.0013 487.015c-42.9995,0 -77.168,-13.9988 -102.68,-41.9965 -25.6645,-27.845 -40.6664,-66.5053 -45.1582,-116.003l279.671 0c0,51.0019 -11.3386,90.1638 -34.1685,117.333 -22.8299,27.1691 -55.3411,40.6664 -97.6647,40.6664z"/>
+   <glyph unicode="K" horiz-adv-x="613" d="M614.008 0l-97.6647 0 -260.352 346.329 -74.8348 -66.5053 0 -279.824 -82.9899 0 0 714.005 82.9899 0 0 -354.004 323.848 354.004 98.3188 0 -287.325 -310.176 298.009 -403.829z"/>
+   <glyph unicode="i" horiz-adv-x="253" d="M167.005 0l-81.0056 0 0 535.008 81.0056 0 0 -535.008zm-87.8306 680.338c0,18.4907 4.49183,31.988 13.6499,40.6664 9.17991,8.65659 20.5185,12.9958 34.1685,12.9958 13.0176,0 24.3344,-4.3392 33.667,-13.1702 9.50699,-8.83103 14.1733,-22.3283 14.1733,-40.4919 0,-18.338 -4.66627,-32.0098 -14.1733,-40.8408 -9.33255,-9.00547 -20.6494,-13.4973 -33.667,-13.4973 -13.6499,0 -24.9886,4.49183 -34.1685,13.4973 -9.15811,8.83103 -13.6499,22.5028 -13.6499,40.8408z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Open Sans";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil3 {fill:#04B8D4}
+    .fil2 {fill:#1B5F9E}
+    .fil4 {fill:#54DDF2}
+    .fil1 {fill:#7F19AF}
+    .fil0 {fill:#C71892}
+    .fil5 {fill:white}
+    .fnt0 {font-weight:normal;font-size:458.61px;font-family:'Open Sans'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2823592305088">
+   <g>
+    <rect class="fil0" x="491" y="867" width="13018" height="1094"/>
+    <rect class="fil1" x="491" y="2666" width="10583" height="1094"/>
+    <rect class="fil2" x="491" y="4465" width="7408" height="1094"/>
+    <rect class="fil3" x="491" y="6264" width="5644" height="1094"/>
+    <rect class="fil4" x="491" y="8063" width="3246" height="1094"/>
+    <rect class="fil0" x="491" y="761" width="13017.5" height="70.56"/>
+    <rect class="fil0" x="491" y="655" width="13017.5" height="70.56"/>
+    <text x="4000" y="8788"  class="fil5 fnt0">Kiev</text>
+   </g>
+   <rect class="fil0" x="491" y="549" width="13017.5" height="70.56"/>
+   <rect class="fil0" x="491" y="443" width="13017.5" height="70.56"/>
+  </g>
+ </g>
+</svg>
