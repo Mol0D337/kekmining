@@ -1,0 +1,108 @@
+{
+  "form": {
+    "hello": "Hello"
+  },
+  "header": {
+    "aboutUs": "About us",
+    "possibilities": "Possibilities",
+    "price": "Price",
+    "testimonials": "Testimonials",
+    "registration": "Registration",
+    "entry": "Entry"
+  },
+  "entry": {
+    "entryForUser": "Member Login",
+    "regForUser": "Registration of participants",
+    "email": "Email address:",
+    "password": "Password:",
+    "entry": "Entry",
+    "forgotPassword": "Forgot your password?",
+    "registration": "Registration",
+    "name": "Name:",
+    "repeatPassword": "Repeat password:",
+    "error": "Wrong login or password."
+  },
+  "info": {
+    "title": "start mining production with industry leaders",
+    "subTitle": "We make industrial mining accessible to all. You get access to the latest and most advanced technologies in the industry provided by the leading company.",
+    "button": "Get started"
+  },
+  "steps": {
+    "title": "Three simple steps for startup of mining",
+    "registration": "Registration",
+    "payment": "Choose a payment plan",
+    "coins": "Get coins",
+    "video": "Video title",
+    "cardTitle": "What is the price of our capacities?"
+  },
+  "about": {
+    "aboutUs": "About us",
+    "WhyUs": "Why us",
+    "text": "Kekmining is a modern approach, the most innovative systems and the maximum ease of use. Now speaking about mining, you should not think about buying and setting up expensive equipment, it's enough to choose the necessary speed, to distribute assets and get the maximum income."
+  },
+  "advantages": {
+    "ourAdvantages": "Our advantages",
+    "instant": "Instant connection",
+    "uninterrupted": "Uninterrupted operation",
+    "fixed": "Fixed commission",
+    "best": "Best statistical base",
+    "instantWith": "Instant withdrawal",
+    "figures": "Figures and Facts",
+    "text1": "Since 2014, our company has been continuously growing and bringing constant income to customers.",
+    "text2": "In 2014 it was a small unit in Kiev, now we are aimed at the whole world!",
+    "text3": "Reputation above all",
+    "text4": "We adhere to an open policy of work. Honesty, dignity, an agreement without subtext. No hidden commissions and compensation. The withdrawal is at any time.",
+    "reserved": "All rigths reserved",
+    "titleSlider": "What do people think of us?"
+  },
+  "product": {
+    "min": "Minimal hashrate:",
+    "pay": "Payment for maintenance:",
+    "equipment": "Equipment:",
+    "button": "Get started"
+  },
+  "any": {
+    "logout": "Log off",
+
+    "buyHash": "Buy hashrate",
+    "personalOffice": "Personal area",
+    "referrals": "Referrals",
+    "history": "History",
+    "wallets": "Wallets",
+    "transactions": "Transactions",
+    "settings": "Settings",
+    "help": "Help",
+    "codes": "Codes",
+    "profile": "Profile",
+    "email": "Email address",
+    "password": "Password",
+    "avatar": "Avatar",
+    "btc": "BTC purse",
+    "eth": "ETH purse",
+    "dash": "DASH purse",
+    "zec": "ZEC purse",
+
+    "save": "Save",
+    "alert": "Change of wallet address blocks withdrawals for a period of 2 weeks after confirmation, for security reasons",
+    "bitcoin": "How to create a Bitcoin wallet?",
+    "ethereum": "How to create an Ethereum wallet?",
+    "dashW": "How to create a DASH wallet?",
+    "zcash": "How to create a Zcash wallet?",
+    "avatarText": "Click to upload a photo.",
+    "data": "Contact details",
+
+    "name": "Name",
+    "surname": "Surname",
+    "birth": "Data of Birth",
+    "company": "Company",
+    "companyCode": "Company Code",
+    "inn": "INN",
+    "address1": "Address 1",
+    "address2": "Address 2",
+    "city": "City",
+    "region": "Region",
+    "country": "Country",
+    "postCode": "Postcode"
+
+  }
+}

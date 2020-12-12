@@ -7197,6 +7197,11 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "^1.2.5"
 
+moment@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -10365,11 +10370,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-awesome-swiper@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-4.1.1.tgz#8f7ab221ad003021d756b86aa618f429924900fe"
-  integrity sha512-50um10t6N+lJaORkpwSi1wWuMmBI1sgFc9Znsi5oUykw2cO5DzLaBHcO2JNX21R+Ue4TGoIJDhhxjBHtkFrTEQ==
-
 vue-cli-plugin-svg-sprite@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/vue-cli-plugin-svg-sprite/-/vue-cli-plugin-svg-sprite-1.0.0.tgz#d9b1e6a3eadc2105976a5882d4c5ee5ad385511b"
@@ -10391,6 +10391,13 @@ vue-click-outside@^1.1.0:
   resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.1.0.tgz#48b7680b518923e701643cccb3e165854aad99eb"
   integrity sha512-pNyvAA9mRXJwPHlHJyjMb4IONSc7khS5lxGcMyE2EIKgNMAO279PWM9Hyq0d5J4FkiSRdmFLwnbjDd5UtPizHQ==
 
+vue-englishdatepicker@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vue-englishdatepicker/-/vue-englishdatepicker-0.1.0.tgz#f993fd9a1c6ebda63fb676d02d3c35bba54fff2a"
+  integrity sha512-aRd9Jl1WeonaIA5UYT4YvoZaeXVf+nnd4cnxu/IUblJ0BpeU6/+qDXoKmOVymPrX3OK82tLVSBPFnAqaMej7dA==
+  dependencies:
+    moment "^2.29.1"
+
 vue-eslint-parser@^7.0.0:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.1.1.tgz#c43c1c715ff50778b9a7e9a4e16921185f3425d3"
@@ -10407,6 +10414,11 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-i18n@^8.22.2:
+  version "8.22.2"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.22.2.tgz#58299a5a050e67b4f799d96fee7dd8bd269e0907"
+  integrity sha512-rb569fVJInPUgS/bbCxEQ9DrAoFTntuJvYoK4Fpk2VfNbA09WzdTKk57ppjz3S+ps9hW+p9H+2ASgMvojedkow==
 
 "vue-loader-v16@npm:vue-loader@^16.0.0-beta.7":
   version "16.1.0"

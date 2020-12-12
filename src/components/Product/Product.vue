@@ -1,14 +1,19 @@
 <template>
   <div class="product">
-    <img :src=" require('../../assets/images/imgIcons/' + product_data.image) " alt="">
+    <div class="img">
+      <img :src=" require('../../assets/images/imgIcons/' + product_data.image) " alt="">
+    </div>
     <div class="product__title"><b>{{product_data.name}}</b></div>
-    <div class="product__min">Minimal hashrate: <b>{{product_data.min}}</b></div>
-    <div class="product__pay">Payment for maintenance: <br/><b>{{product_data.pay}}</b></div>
-    <div class="product__equipment">Equipment: <b>{{product_data.equipment}}</b></div>
+    <div class="product__min">{{$t('product.min')}} <b>{{product_data.min}}</b></div>
+    <div class="product__pay">{{$t('product.pay')}} <br/><b>{{product_data.pay}}</b></div>
+    <div class="product__equipment">{{$t('product.equipment')}} <b>{{product_data.equipment}}</b></div>
+
+
     <input type="range" min="0" max="100" step="1" value="0">
+
     <div class="product__price"><b>{{product_data.price}}</b></div>
     <button class="btn btn-card">
-      <span>Get started</span>
+      <span>{{$t('product.button')}}</span>
     </button>
   </div>
 </template>
@@ -16,6 +21,11 @@
 <script>
   export default {
     name: "Product",
+    data() {
+      return {
+        inputNum: 10,
+      }
+    },
     components: {},
     props: {
       product_data: {
@@ -40,9 +50,6 @@
 
     &:hover
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.15)
-    img
-      margin-top: 40px
-      margin-bottom: 20px
     &__title
       font-size: 23px
     &__min
@@ -58,9 +65,18 @@
       margin-bottom: 15px
       font-size: 23px
 
+  .btn
+    margin-bottom: 20px
+
+  .img
+    width: 100%
+    height: 120px
+    padding-top: 40px
+    padding-bottom: 20px
+
+
   input
     margin: 40px 0 40px
 
-  .btn
-    margin-bottom: 20px
+
 </style>

@@ -5,23 +5,21 @@
     max-width="480px"
     :class="dialog ? 'kek' : ''"
     @keydown.esc="closeModal"
-    @click:outside="closeModal"
   >
-    <template v-slot:activator="{ on }">
+    <template v-slot:activator="{ on }" >
       <button class="btn btn-l"
-
               @click="dialog = true"
       >
-        <span>entry</span>
+        <span>{{$t('header.entry')}}</span>
       </button>
     </template>
 
-    <form class="modal" @submit.prevent="submit">
+    <form class="modal" @submit.prevent="submit" >
 
       <div class="modal__wrapper"  >
         <div class="modal__top">
           <img src="../../assets/images/backgroundM/5.svg" alt="">
-          <div class="modal__title">Вход для Учасников</div>
+          <div class="modal__title">{{$t('entry.entryForUser')}}</div>
 
           <div class="clear" @click="closeModal">&times;</div>
 
@@ -30,7 +28,7 @@
           <div class="modal__bottom-wrapper">
 
             <div class="inputs" :class="{ 'form-group--error': $v.email.$error }">
-              <div>Электронный адрес:</div>
+              <div>{{$t('entry.email')}}</div>
               <input class="input" type="text"
                      placeholder="UserEmail@kekmining.com"
                      v-model.trim="$v.email.$model"
@@ -38,19 +36,19 @@
             </div>
 
             <div class="inputs" :class="{ 'form-group--error': $v.password.$error }">
-              <div>Пароль:</div>
-              <input class="input" type="password" placeholder="Password"
+              <div>{{$t('entry.password')}}</div>
+              <input class="input" type="password" :placeholder="$t('any.password')"
                      v-model.trim="$v.password.$model"
               >
             </div>
 
             <div class="btn__wrapper">
               <button class="btn btn-main" type="submit" :disabled="submitStatus === 'PENDING'">
-                <span>Войти</span>
+                <span>{{$t('entry.entry')}}</span>
               </button>
             </div>
 
-            <p class="typo__p" v-if="submitStatus === 'ERROR'">Неверный логин или пароль.</p>
+            <p class="typo__p" v-if="submitStatus === 'ERROR'">{{$t('entry.error')}}</p>
 
             <div class="link">
               <router-link
@@ -58,7 +56,7 @@
                 tag="div"
                 class="link__right"
               >
-                Забыли пароль?
+                {{$t('entry.forgotPassword')}}
               </router-link>
             </div>
           </div>
@@ -78,18 +76,9 @@
 
   export default {
     name: 'Login',
-    computed: {
-      ...mapGetters([
-        'getModal',
-        'getModalType',
-        'getCancelHandler',
-        'getAgreeHandler'
-      ])
-    },
     components: { Registration},
     data() {
       return {
-        opened: false,
         dialog: false,
         email: '',
         password: '',
@@ -123,16 +112,20 @@
           };
           try {
             await this.$store.dispatch('login', formData);
-            this.$router.push('/set');
             localStorage.setItem('userAuth', 'yes');
+            this.$router.push('/buy-hash');
           } catch (e) {}
         }
       },
-
     },
-    directives: {
-      ClickOutside
-    },
+    mounted() {
+      let vm = this;
+      document.addEventListener('click', function (item) {
+        if (item.target === vm.$refs['popup']) {
+          vm.closeModal();
+        }
+      })
+    }
   }
 </script>
 
@@ -178,8 +171,10 @@
       justify-content: center
       align-items: center
       position: absolute
-      top: 35px
-      left: 25%
+      top: 0
+      left: 0
+      right: 0
+      bottom: 25%
 
     &__bottom
       width: 320px
