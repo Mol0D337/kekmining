@@ -14,7 +14,6 @@
     margin: 0 auto;
     overflow-x: hidden;
   }
-
   ::-webkit-scrollbar { /* 1 - скроллбар */
     width: 0;
     height: 50px;
