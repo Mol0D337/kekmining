@@ -62,7 +62,9 @@
     "button": "Get started"
   },
   "any": {
+    "back": "Back",
     "logout": "Log off",
+    "payment": "Payment",
 
     "buyHash": "Buy hashrate",
     "personalOffice": "Personal area",

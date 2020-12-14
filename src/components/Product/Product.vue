@@ -4,17 +4,29 @@
       <img :src=" require('../../assets/images/imgIcons/' + product_data.image) " alt="">
     </div>
     <div class="product__title"><b>{{product_data.name}}</b></div>
-    <div class="product__min">{{$t('product.min')}} <b>{{product_data.min}}</b></div>
+    <div class="product__min">{{$t('product.min')}} <b>{{product_data.min}} {{product_data.minText}}</b></div>
     <div class="product__pay">{{$t('product.pay')}} <br/><b>{{product_data.pay}}</b></div>
     <div class="product__equipment">{{$t('product.equipment')}} <b>{{product_data.equipment}}</b></div>
 
 
-    <input type="range" min="0" max="100" step="1" value="0">
+    <div class="kek">
+      <div class="lol" :style="{'left': + (24 * inputNum) + 'px'}">{{product_data.min * (inputNum)}} {{product_data.minText}}</div>
+      <input style="width: 300px;"
+             type="range" min="1" max="10" step="1" v-model="inputNum">
+    </div>
 
-    <div class="product__price"><b>{{product_data.price}}</b></div>
-    <button class="btn btn-card">
-      <span>{{$t('product.button')}}</span>
-    </button>
+
+    <div class="product__price"><b>${{product_data.price * product_data.min * (inputNum)}}</b></div>
+
+
+    <router-link
+      :to="{name: 'BuyCard'}"
+    >
+      <button class="btn btn-card">
+        <span>{{$t('product.button')}}</span>
+      </button>
+    </router-link>
+
   </div>
 </template>
 
@@ -23,10 +35,9 @@
     name: "Product",
     data() {
       return {
-        inputNum: 10,
+        inputNum: 1,
       }
     },
-    components: {},
     props: {
       product_data: {
         type: Object,
@@ -39,6 +50,12 @@
 </script>
 
 <style scoped lang="sass">
+  .lol
+    width: 100px
+    position: relative
+    left: 0
+    top: 35px
+
   .product
     margin: 20px
     text-align: center
