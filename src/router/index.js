@@ -49,6 +49,19 @@ export default new VueRouter({
       }
     },
     {
+      path: '/buy-hash/payment',
+      name: 'BuyCard',
+      component: () => import('../views/OtherPage/BuyCard.vue'),
+      beforeEnter: (to, from, next) => {
+        const userAuth = localStorage.getItem('userAuth');
+        if (userAuth === "yes") {
+          next()
+        } else {
+          next('/')
+        }
+      }
+    },
+    {
       path: '/help',
       name: 'Help',
       component: () => import('../views/AdminPanel/Help.vue'),

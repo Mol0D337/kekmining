@@ -62,7 +62,9 @@
     "button": "Начать"
   },
   "any": {
+    "back": "Назад",
     "logout": "Выйти",
+    "payment": "Оплатить",
     "buyHash": "Купить хэшрейт",
     "personalOffice": "Личный кабинет",
     "referrals": "Рефералы",
