@@ -7,12 +7,11 @@
       <div class="tb table-body-watch">{{referral_data.watch}}</div>
       <div class="tb table-body-reg">{{referral_data.reg}}</div>
       <div class="tb table-body-buy">{{referral_data.buy}}</div>
-      <div class="tb table-body-percent">{{referral_data.percent}}</div>
+      <div class="tb table-body-percent">{{ lol() }}%</div>
       <div class="tb table-body-earned">{{referral_data.earned}}</div>
       <div class="tb table-body-create">{{referral_data.create}}</div>
     </div>
   </div>
-
 
 </template>
 
@@ -25,7 +24,12 @@
         default: () => {
           return {}
         }
-      }
+      },
+    },
+    methods: {
+      lol() {
+        return Math.ceil( (this.referral_data.buy / this.referral_data.reg) * 100 );
+      },
     },
   }
 </script>

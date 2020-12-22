@@ -132,5 +132,17 @@
   "answers": {
     "answer1": "The current term for SHA-256 and SCRYPT contracts is 365 days, and they also imply a separate fee for electricity and maintenance. ETHASH, EQUIHASH and DASH contracts do not require additional fees.",
     "answer2": "To order power from us, just purchase a Hashrate, for this you need to determine its quantity in the menu in advance, and put a tick in front of the license agreement. Next, you select a payment method, and it is bitcoin, credit card or bank transfer."
+  },
+  "table": {
+    "name": "Name",
+    "code": "Code",
+    "watch": "Watch",
+    "reg": "Registration ",
+    "buy": "Buy",
+    "percent": "Percent",
+    "earned": "Earned",
+    "create": "Create",
+    "addNewCode": "Add new code",
+    "search": "Search"
   }
 }

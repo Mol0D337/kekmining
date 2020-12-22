@@ -9,8 +9,9 @@
         :initial-value="true"
       >
         <button style="margin: 20px 0 20px 17px" class="btn btn-table-1">
-          <span>Добавить новый код</span>
+          <span>{{$t('table.addNewCode')}}</span>
         </button>
+
         <Table/>
 
 

@@ -3,14 +3,14 @@
 
     <div class="table">
       <div class="table-header">
-        <p style="border-top-left-radius: 5px" @click="sortBy">Имя <SvgIcon name="50"/> </p>
-        <p @click="sortBy">Код  <SvgIcon name="50"/></p>
-        <p @click="sortBy">Посещения <SvgIcon name="50"/></p>
-        <p @click="sortBy">Регестрации <SvgIcon name="50"/></p>
-        <p @click="sortBy">Покупки <SvgIcon name="50"/></p>
-        <p @click="sortBy">Конверсия <SvgIcon name="50"/></p>
-        <p @click="sortBy">Зароботок <SvgIcon name="50"/></p>
-        <p style="border-top-right-radius: 5px" @click="sortBy">Создано <SvgIcon name="50"/></p>
+        <p style="border-top-left-radius: 5px" @click="sortBy">{{$t('table.name')}} <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.code')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.watch')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.reg')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.buy')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.percent')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.earned')}} <SvgIcon name="50"/></p>
+        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.create')}} <SvgIcon name="50"/></p>
       </div>
       <TableRef
         v-for="referral in pagineted"
@@ -18,19 +18,19 @@
         :referral_data="referral"
       />
       <div class="table-header">
-        <p style="border-bottom-left-radius: 5px">Имя <SvgIcon name="50"/> </p>
-        <p>Код  <SvgIcon name="50"/></p>
-        <p>Посещения <SvgIcon name="50"/></p>
-        <p>Регестрации <SvgIcon name="50"/></p>
-        <p>Покупки <SvgIcon name="50"/></p>
-        <p>Конверсия <SvgIcon name="50"/></p>
-        <p>Зароботок <SvgIcon name="50"/></p>
-        <p style="border-bottom-right-radius: 5px">Создано  <SvgIcon name="50"/></p>
+        <p style="border-top-left-radius: 5px" @click="sortBy">{{$t('table.name')}} <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.code')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.watch')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.reg')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.buy')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.percent')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.earned')}} <SvgIcon name="50"/></p>
+        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.create')}} <SvgIcon name="50"/></p>
       </div>
     </div>
 
     <div class="input-pagin">
-      <input style="margin: 20px 0 20px 17px" type="text" class="input" placeholder="Поиск">
+      <input style="margin: 20px 0 20px 17px" type="text" class="input" :placeholder="$t('table.search')">
       <div class="pagination">
         <div class="btn-prev" @click="btnPrev">
           <
@@ -67,8 +67,8 @@
             name: "a",
             code: "E79EOA4",
             watch: "1",
-            reg: "2",
-            buy: "1",
+            reg: "7",
+            buy: "3",
             percent: "20%",
             earned: "0.001 BTC",
             create: "2020-05-03"
@@ -260,6 +260,7 @@
     margin: 0 auto
 
     &-header
+      user-select: none
       display: flex
       justify-content: space-around
 
