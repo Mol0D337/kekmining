@@ -32,7 +32,7 @@
     <div class="input-pagin">
       <input style="margin: 20px 0 20px 17px" type="text" class="input" placeholder="Поиск">
       <div class="pagination">
-        <div class="btn-prev">
+        <div class="btn-prev" @click="btnPrev">
           <
         </div>
         <div class="page"
@@ -43,7 +43,7 @@
         >
           {{page}}
         </div>
-        <div class="btn-next">
+        <div class="btn-next" @click="btnNext">
           >
         </div>
       </div>
@@ -63,6 +63,36 @@
     data () {
       return {
         referrals: [
+          {
+            name: "a",
+            code: "E79EOA4",
+            watch: "1",
+            reg: "2",
+            buy: "1",
+            percent: "20%",
+            earned: "0.001 BTC",
+            create: "2020-05-03"
+          },
+          {
+            name: "b",
+            code: "E77EOA4",
+            watch: "2",
+            reg: "2",
+            buy: "2",
+            percent: "22%",
+            earned: "0.006 BTC",
+            create: "2020-05-12"
+          },
+          {
+            name: "c",
+            code: "T70EOA4",
+            watch: "3",
+            reg: "2",
+            buy: "0",
+            percent: "29%",
+            earned: "0.007 BTC",
+            create: "2020-01-20"
+          },
           {
             name: "a",
             code: "E79EOA4",
@@ -163,6 +193,18 @@
       pageClick(page) {
         this.pageNum = page;
       },
+      btnNext() {
+        if (this.pageNum < (Math.ceil(this.referrals.length / 3))) {
+          this.pageNum++;
+        }
+      },
+      btnPrev() {
+        if (this.pageNum > 1) {
+          this.pageNum--;
+        } else if (this.pageNum <= 1) {
+          this.pageNum = 1;
+        }
+      },
       sortBy() {
         if (this.switchName === true) {
           this.referrals.sort((a, b) => a.name.localeCompare(b.name));
@@ -190,6 +232,7 @@
     background-color: #f6f6ff
 
   .pagination
+    user-select: none
     display: flex
     flex-wrap: wrap
     justify-content: center
