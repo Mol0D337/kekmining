@@ -3,7 +3,7 @@
     <NavBar/>
 
     <div class="wrapper__content">
-      <div class="text"><b>Referrals</b></div>
+      <div class="text"><b>{{$t('any.referrals')}}</b></div>
       <DropDown
         :title="$t('any.codes')"
         :initial-value="true"
@@ -14,8 +14,6 @@
         <Table/>
 
 
-
-        <input style="margin: 20px 0 20px 17px" type="text" class="input" placeholder="Поиск">
       </DropDown>
 
     </div>

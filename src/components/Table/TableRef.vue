@@ -1,17 +1,18 @@
 <template>
 
-    <div class="table">
-      <div class="table-body">
-        <div class="tb table-body-name">{{referral_data.name}}</div>
-        <div class="tb table-body-code">{{referral_data.code}}</div>
-        <div class="tb table-body-watch">{{referral_data.watch}}</div>
-        <div class="tb table-body-reg">{{referral_data.reg}}</div>
-        <div class="tb table-body-buy">{{referral_data.buy}}</div>
-        <div class="tb table-body-percent">{{referral_data.percent}}</div>
-        <div class="tb table-body-earned">{{referral_data.earned}}</div>
-        <div class="tb table-body-create">{{referral_data.create}}</div>
-      </div>
+  <div class="table">
+    <div class="table-body">
+      <div class="tb table-body-name">{{referral_data.name}}</div>
+      <div class="tb table-body-code">{{referral_data.code}}</div>
+      <div class="tb table-body-watch">{{referral_data.watch}}</div>
+      <div class="tb table-body-reg">{{referral_data.reg}}</div>
+      <div class="tb table-body-buy">{{referral_data.buy}}</div>
+      <div class="tb table-body-percent">{{referral_data.percent}}</div>
+      <div class="tb table-body-earned">{{referral_data.earned}}</div>
+      <div class="tb table-body-create">{{referral_data.create}}</div>
     </div>
+  </div>
+
 
 </template>
 
