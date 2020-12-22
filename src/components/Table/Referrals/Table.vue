@@ -13,24 +13,24 @@
         <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.create')}} <SvgIcon name="50"/></p>
       </div>
       <TableRef
-        v-for="referral in pagineted"
+        v-for="referral in paginated"
         :key="referral.id"
         :referral_data="referral"
       />
       <div class="table-header">
-        <p style="border-top-left-radius: 5px" @click="sortBy">{{$t('table.name')}} <SvgIcon name="50"/> </p>
+        <p style="border-bottom-left-radius: 5px" @click="sortBy">{{$t('table.name')}} <SvgIcon name="50"/> </p>
         <p @click="sortBy">{{$t('table.code')}}  <SvgIcon name="50"/></p>
         <p @click="sortBy">{{$t('table.watch')}} <SvgIcon name="50"/></p>
         <p @click="sortBy">{{$t('table.reg')}} <SvgIcon name="50"/></p>
         <p @click="sortBy">{{$t('table.buy')}} <SvgIcon name="50"/></p>
         <p @click="sortBy">{{$t('table.percent')}} <SvgIcon name="50"/></p>
         <p @click="sortBy">{{$t('table.earned')}} <SvgIcon name="50"/></p>
-        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.create')}} <SvgIcon name="50"/></p>
+        <p style="border-bottom-right-radius: 5px" @click="sortBy">{{$t('table.create')}} <SvgIcon name="50"/></p>
       </div>
     </div>
 
     <div class="input-pagin">
-      <input style="margin: 20px 0 20px 17px" type="text" class="input" :placeholder="$t('table.search')">
+      <input style="font-size: 14px; margin: 20px 0 20px 17px" type="text" class="input" :placeholder="$t('table.search')">
       <div class="pagination">
         <div class="btn-prev" @click="btnPrev">
           <
@@ -56,7 +56,7 @@
 <script>
   import TableRef from "./TableRef";
 
-  import SvgIcon from "../../elements/SvgIcon";
+  import SvgIcon from "../../../elements/SvgIcon";
   export default {
     name: "Table",
     components: {SvgIcon, TableRef},
@@ -183,7 +183,7 @@
       pages() {
         return Math.ceil(this.referrals.length / 3);
       },
-      pagineted() {
+      paginated() {
         let from = (this.pageNum - 1) * this.itemPage;
         let to = from + this.itemPage;
         return this.referrals.slice(from, to);
