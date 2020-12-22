@@ -4,6 +4,7 @@
 
     <div class="wrapper__content">
       <div class="text"><b>{{$t('any.referrals')}}</b></div>
+      <AllBuy/>
       <DropDown
         :title="$t('any.codes')"
         :initial-value="true"
@@ -17,6 +18,13 @@
 
       </DropDown>
 
+      <DropDown
+        :title="$t('table.buy')"
+        :initial-value="true"
+      >
+        <TableBuy/>
+
+      </DropDown>
     </div>
 
 
@@ -27,11 +35,13 @@
 <script>
   import NavBar from "../../components/MyAdminPanel/NavBar";
   import ToolBar from "../../components/MyAdminPanel/ToolBar";
-  import Table from "../../components/Table/Table";
+  import Table from "../../components/Table/Referrals/Table";
   import DropDown from "../../components/DropDown/DropDown";
+  import AllBuy from "../../components/Referrals/AllBuy";
+  import TableBuy from "../../components/Table/Referrals/TableBuy";
   export default {
     name: "Referrals",
-    components: {DropDown, Table, ToolBar, NavBar}
+    components: {TableBuy, AllBuy, DropDown, Table, ToolBar, NavBar}
   }
 </script>
 
