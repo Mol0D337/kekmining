@@ -62,6 +62,9 @@
     "button": "Get started"
   },
   "any": {
+    "myWalletsInner": "My internal wallets",
+    "myWalletsWrapper": "My wallets for payments",
+
     "back": "Back",
     "logout": "Log off",
     "payment": "Payment",
@@ -144,6 +147,10 @@
     "create": "Create",
     "addNewCode": "Add new code",
     "search": "Search",
-    "source": "Source"
+    "source": "Source",
+    "val": "Currency",
+    "bill": "Bill",
+    "act": "Action",
+    "innerName": "Inner name"
   }
 }
