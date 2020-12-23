@@ -19,6 +19,7 @@
       </DropDown>
 
       <DropDown
+        style="padding-bottom: 100px; margin-bottom: 0;"
         :title="$t('table.buy')"
         :initial-value="true"
       >

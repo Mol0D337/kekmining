@@ -2,7 +2,6 @@
   <div>
     <DropDown
       :title="$t('any.codes')"
-      :initial-value="true"
     >
       <div class="text__info"><b>31 / 9</b></div>
       <div class="text__info">Конверсия 36%</div>
