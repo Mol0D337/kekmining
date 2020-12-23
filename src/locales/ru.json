@@ -150,7 +150,13 @@
     "val": "Валюта",
     "bill": "Баланс",
     "act": "Действие",
-    "innerName": "Внутреннее имя"
+    "innerName": "Внутреннее имя",
+
+    "contracts": "Contracts",
+    "type": "Type",
+    "sum": "Total",
+
+
   }
 
 }

@@ -11,6 +11,7 @@
         <WrapperTable/>
       </DropDown>
       <DropDown
+        style="padding-bottom: 100px"
         :title="$t('any.myWalletsWrapper')"
         :initial-value="true"
       >
