@@ -1,5 +1,4 @@
 <template>
-  <div class="table">
     <div class="table-body">
       <div class="tb table-body-name">{{wrapperWallets_data.val}}</div>
       <div class="tb table-body-earned">{{wrapperWallets_data.innerName}}</div>
@@ -13,7 +12,6 @@
         </button>
       </div>
     </div>
-  </div>
 </template>
 
 <script>

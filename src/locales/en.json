@@ -151,6 +151,21 @@
     "val": "Currency",
     "bill": "Bill",
     "act": "Action",
-    "innerName": "Inner name"
+    "innerName": "Inner name",
+
+    "type": "Type",
+    "sum": "Sum",
+    "start": "Launch / start",
+    "finish": "Finish",
+    "quantity": "Quantity",
+    "product": "Product",
+    "total": "Total",
+    "payment": "Payment",
+    "time": "Time",
+    "status": "Status",
+    "contracts": "Contracts",
+    "allBuy": "Total purchases / registrations",
+    "out": "Withdraw funds",
+    "trans": "Internal transactions"
   }
 }
