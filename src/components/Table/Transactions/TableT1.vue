@@ -3,19 +3,25 @@
 
     <div class="table">
       <div class="table-header">
-        <p style="border-top-left-radius: 5px" @click="sortBy">{{$t('table.val')}} <SvgIcon name="50"/> </p>
-        <p @click="sortBy">{{$t('table.bill')}} <SvgIcon name="50"/></p>
-        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.act')}} <SvgIcon name="50"/></p>
+        <p style="border-top-left-radius: 5px" @click="sortBy">ID <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.time')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.sum')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.status')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">TxID <SvgIcon name="50"/></p>
+        <p style="border-top-right-radius: 5px" @click="sortBy">TxID(alt) <SvgIcon name="50"/></p>
       </div>
-      <WrapperTableWallets
-        v-for="innerWallets in paginated"
-        :key="innerWallets.id"
-        :innerWallets_data="innerWallets"
+      <TableTransactions1
+        v-for="out in paginated"
+        :key="out.id"
+        :out_data="out"
       />
       <div class="table-header">
-        <p style="border-bottom-left-radius: 5px" @click="sortBy">{{$t('table.val')}} <SvgIcon name="50"/> </p>
-        <p @click="sortBy">{{$t('table.bill')}} <SvgIcon name="50"/></p>
-        <p style="border-bottom-right-radius: 5px" @click="sortBy">{{$t('table.act')}} <SvgIcon name="50"/></p>
+        <p style="border-bottom-left-radius: 5px" @click="sortBy">ID <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.time')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.sum')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.status')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">TxID <SvgIcon name="50"/></p>
+        <p style="border-bottom-right-radius: 5px" @click="sortBy">TxID(alt) <SvgIcon name="50"/></p>
       </div>
     </div>
 
@@ -44,17 +50,21 @@
 </template>
 
 <script>
-  import WrapperTableWallets from "./WrapperTableWallets";
+  import TableTransactions1 from "./TableTransactions1";
   import SvgIcon from "../../../elements/SvgIcon";
   export default {
-    name: "WrapperTable",
-    components: {SvgIcon, WrapperTableWallets},
+    name: "TableT1",
+    components: {SvgIcon, TableTransactions1},
     data () {
       return {
-        innerWallets: [
+        out: [
           {
-            name: "BTC",
-            earned: "0.005 BTC",
+            id: "No information",
+            time: "-",
+            sum: "-",
+            status: "-",
+            txId: "-",
+            alt: "-",
           },
         ],
         pageNum: 1,
@@ -64,12 +74,12 @@
     },
     computed: {
       pages() {
-        return Math.ceil(this.innerWallets.length / 3);
+        return Math.ceil(this.out.length / 3);
       },
       paginated() {
         let from = (this.pageNum - 1) * this.itemPage;
         let to = from + this.itemPage;
-        return this.innerWallets.slice(from, to);
+        return this.out.slice(from, to);
       },
     },
     methods: {
@@ -77,7 +87,7 @@
         this.pageNum = page;
       },
       btnNext() {
-        if (this.pageNum < (Math.ceil(this.innerWallets.length / 3))) {
+        if (this.pageNum < (Math.ceil(this.out.length / 3))) {
           this.pageNum++;
         }
       },
@@ -90,15 +100,15 @@
       },
       sortBy() {
         if (this.switchName === true) {
-          this.innerWallets.sort((a, b) => a.name.localeCompare(b.name));
+          this.out.sort((a, b) => a.name.localeCompare(b.name));
           this.switchName = false;
         } else if (this.switchName === false) {
-          this.innerWallets.sort((a,b) => b.name.localeCompare(a.name));
+          this.out.sort((a,b) => b.name.localeCompare(a.name));
           this.switchName = true;
         }
       },
       sortByCode() {
-        this.innerWallets.sort((a,b) => a.code - b.code)
+        this.out.sort((a,b) => a.code - b.code)
       },
     }
   }
@@ -156,7 +166,7 @@
       padding: 7px 0 7px 10px
       display: flex
       align-items: center
-      flex-basis: 34%
+      flex-basis: 20%
       text-align: left
       cursor: pointer
 

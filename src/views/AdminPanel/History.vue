@@ -3,19 +3,26 @@
     <NavBar/>
 
     <div class="wrapper__content">
-      <div class="text"><b>{{$t('any.referrals')}}</b></div>
+      <div class="text"><b>{{$t('any.history')}}</b></div>
 
       <DropDown
-        :title="$t('any.codes')"
+        :title="$t('table.contracts')"
         :initial-value="true"
       >
-        <button style="margin: 20px 0 20px 17px" class="btn btn-table-1">
-          <span>{{$t('table.addNewCode')}}</span>
-        </button>
-
-        <Table/>
-
-
+        <TableH1/>
+      </DropDown>
+      <DropDown
+        :title="$t('table.buy')"
+        :initial-value="true"
+      >
+        <TableH2/>
+      </DropDown>
+      <DropDown
+        style="padding-bottom: 100px; margin-bottom: 0;"
+        :title="$t('table.out')"
+        :initial-value="true"
+      >
+        <TableT1/>
       </DropDown>
     </div>
 
@@ -26,9 +33,12 @@
   import NavBar from "../../components/MyAdminPanel/NavBar";
   import ToolBar from "../../components/MyAdminPanel/ToolBar";
   import DropDown from "../../components/DropDown/DropDown";
+  import TableH1 from "../../components/Table/History/TableH1";
+  import TableH2 from "../../components/Table/History/TableH2";
+  import TableT1 from "../../components/Table/Transactions/TableT1";
   export default {
     name: "History",
-    components: {DropDown, ToolBar, NavBar},
+    components: {TableT1, TableH2, TableH1, DropDown, ToolBar, NavBar},
     data() {
       return {
         date: ''

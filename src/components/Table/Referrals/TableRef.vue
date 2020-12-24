@@ -1,6 +1,5 @@
 <template>
 
-  <div class="table">
     <div class="table-body">
       <div class="tb table-body-name">{{referral_data.name}}</div>
       <div class="tb table-body-code">{{referral_data.code}}</div>
@@ -11,7 +10,6 @@
       <div class="tb table-body-earned">{{referral_data.earned}}</div>
       <div class="tb table-body-create">{{referral_data.create}}</div>
     </div>
-  </div>
 
 </template>
 

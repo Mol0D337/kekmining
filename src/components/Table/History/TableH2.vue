@@ -3,21 +3,27 @@
 
     <div class="table">
       <div class="table-header">
-        <p style="border-top-left-radius: 5px" @click="sortBy">{{$t('table.val')}} <SvgIcon name="50"/> </p>
-        <p @click="sortBy">{{$t('table.innerName')}}  <SvgIcon name="50"/></p>
-        <p @click="sortBy">{{$t('any.wallets')}} <SvgIcon name="50"/></p>
-        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.act')}} <SvgIcon name="50"/></p>
+        <p style="border-top-left-radius: 5px" @click="sortBy"># <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.product')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.quantity')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.total')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.payment')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.time')}} <SvgIcon name="50"/></p>
+        <p style="border-top-right-radius: 5px" @click="sortBy">{{$t('table.status')}} <SvgIcon name="50"/></p>
       </div>
-      <TableWallet
-        v-for="wrapperWallets in paginated"
-        :key="wrapperWallets.id"
-        :wrapperWallets_data="wrapperWallets"
+      <TableHistory2
+        v-for="historyBuy in paginated"
+        :key="historyBuy.id"
+        :historyBuy_data="historyBuy"
       />
       <div class="table-header">
-        <p style="border-bottom-left-radius: 5px" @click="sortBy">{{$t('table.val')}} <SvgIcon name="50"/> </p>
-        <p @click="sortBy">{{$t('table.innerName')}}  <SvgIcon name="50"/></p>
-        <p @click="sortBy">{{$t('any.wallets')}} <SvgIcon name="50"/></p>
-        <p style="border-bottom-right-radius: 5px" @click="sortBy">{{$t('table.act')}} <SvgIcon name="50"/></p>
+        <p style="border-bottom-left-radius: 5px" @click="sortBy"># <SvgIcon name="50"/> </p>
+        <p @click="sortBy">{{$t('table.product')}}  <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.quantity')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.total')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.payment')}} <SvgIcon name="50"/></p>
+        <p @click="sortBy">{{$t('table.time')}} <SvgIcon name="50"/></p>
+        <p style="border-bottom-right-radius: 5px" @click="sortBy">{{$t('table.status')}} <SvgIcon name="50"/></p>
       </div>
     </div>
 
@@ -46,23 +52,49 @@
 </template>
 
 <script>
-  import TableWallet from "./TableWallet";
+  import TableHistory2 from "./TableHistory2";
   import SvgIcon from "../../../elements/SvgIcon";
   export default {
-    name: "TableWallets",
-    components: {SvgIcon, TableWallet},
+    name: "TableH2",
+    components: {SvgIcon, TableHistory2},
     data () {
       return {
-        wrapperWallets: [
+        historyBuy: [
           {
-            val: "BTC",
-            innerName: "Bitcoin",
-            wallets: "fljkgdjhioe44590tkjrtt3049503jjigok",
+            name: "403152",
+            product: "SHA-256",
+            quantity: "14 Th/s",
+            total: "2.100.00 USD",
+            payment: "Payeer transfer",
+            time: "02.11.2020",
+            status: "Yes",
           },
           {
-            val: "ETH",
-            innerName: "Ethereum",
-            wallets: "ustg5gp628sr8bgtw79282945eiz322hccy",
+            name: "3689780",
+            product: "SHA-256",
+            quantity: "1 Th/s",
+            total: "100.00 USD",
+            payment: "Payeer transfer",
+            time: "03.11.2020",
+            status: "ok",
+          },
+          {
+            name: "3095935",
+            product: "SHA-256",
+            quantity: "2 Th/s",
+            total: "400.00 USD",
+            payment: "LPB transfer",
+            time: "08.11.2020",
+            status: "No",
+          },
+          {
+            name: "403152",
+            product: "SHA-256",
+            quantity: "14 Th/s",
+            total: "2.100.00 USD",
+            payment: "Payeer transfer",
+            time: "09.11.2020",
+            status: "Error",
           },
         ],
         pageNum: 1,
@@ -72,12 +104,12 @@
     },
     computed: {
       pages() {
-        return Math.ceil(this.wrapperWallets.length / 3);
+        return Math.ceil(this.historyBuy.length / 3);
       },
       paginated() {
         let from = (this.pageNum - 1) * this.itemPage;
         let to = from + this.itemPage;
-        return this.wrapperWallets.slice(from, to);
+        return this.historyBuy.slice(from, to);
       },
     },
     methods: {
@@ -85,7 +117,7 @@
         this.pageNum = page;
       },
       btnNext() {
-        if (this.pageNum < (Math.ceil(this.wrapperWallets.length / 3))) {
+        if (this.pageNum < (Math.ceil(this.historyBuy.length / 3))) {
           this.pageNum++;
         }
       },
@@ -98,15 +130,15 @@
       },
       sortBy() {
         if (this.switchName === true) {
-          this.wrapperWallets.sort((a, b) => a.name.localeCompare(b.name));
+          this.historyBuy.sort((a, b) => a.name.localeCompare(b.name));
           this.switchName = false;
         } else if (this.switchName === false) {
-          this.wrapperWallets.sort((a,b) => b.name.localeCompare(a.name));
+          this.historyBuy.sort((a,b) => b.name.localeCompare(a.name));
           this.switchName = true;
         }
       },
       sortByCode() {
-        this.wrapperWallets.sort((a,b) => a.code - b.code)
+        this.historyBuy.sort((a,b) => a.code - b.code)
       },
     }
   }
@@ -164,7 +196,7 @@
       padding: 7px 0 7px 10px
       display: flex
       align-items: center
-      flex-basis: 25%
+      flex-basis: 14.5%
       text-align: left
       cursor: pointer
 
