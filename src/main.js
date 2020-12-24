@@ -3,7 +3,7 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import Vuelidate from 'vuelidate'
 import ClickOutside  from 'vue-click-outside'
 import firebase from 'firebase/app'
@@ -11,8 +11,13 @@ import 'firebase/auth'
 import 'firebase/database'
 import {i18n} from './i18n'
 import Loader from '@/components/Loader/Loader'
-import VueEnglishdatepicker from "vue-englishdatepicker";
+import VueEnglishdatepicker from "vue-englishdatepicker"
+import PureVueChart from 'pure-vue-chart'
+import Donut from 'vue-css-donut-chart';
+import 'vue-css-donut-chart/dist/vcdonut.css';
 
+Vue.use(Donut);
+Vue.use(PureVueChart);
 Vue.use(VueEnglishdatepicker);
 Vue.use(Vuelidate);
 Vue.use(ClickOutside );
