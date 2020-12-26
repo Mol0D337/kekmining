@@ -33,7 +33,7 @@
   import NavBar from "../../components/MyAdminPanel/NavBar";
   import ToolBar from "../../components/MyAdminPanel/ToolBar";
   import DropDown from "../../components/DropDown/DropDown";
-  import TableH1 from "../../components/Table/History/TableH1";
+  import TableH1 from "../../assets/images/imgPage/TableH1";
   import TableH2 from "../../components/Table/History/TableH2";
   import TableT1 from "../../components/Table/Transactions/TableT1";
   export default {

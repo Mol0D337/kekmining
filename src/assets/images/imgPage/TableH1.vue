@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import TableHistory1 from "./TableHistory1";
+  import TableHistory1 from "../../../components/Table/History/TableHistory1";
   import SvgIcon from "../../../elements/SvgIcon";
   export default {
     name: "TableH1",
