@@ -15,7 +15,9 @@ import VueEnglishdatepicker from "vue-englishdatepicker"
 import PureVueChart from 'pure-vue-chart'
 import Donut from 'vue-css-donut-chart';
 import 'vue-css-donut-chart/dist/vcdonut.css';
+import TrendChart from "vue-trend-chart";
 
+Vue.use(TrendChart);
 Vue.use(Donut);
 Vue.use(PureVueChart);
 Vue.use(VueEnglishdatepicker);
