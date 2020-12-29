@@ -219,8 +219,6 @@
     justify-content: space-between
     align-items: flex-start
 
-  .office__info
-
   .random
     +reg
 
