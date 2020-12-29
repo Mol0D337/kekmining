@@ -1,5 +1,7 @@
 # lifemining
 
+https://mol0d337.github.io/kekmining/
+
 ## Project setup
 ```
 yarn install
