@@ -1,5 +1,6 @@
 module.exports = {
   lintOnSave: false,
+  publicPath: '/kekmining/',
   pluginOptions: {
     svgSprite: {
       /*
@@ -43,4 +44,4 @@ module.exports = {
       .use('svgo-loader')
       .loader('svgo-loader')
   }
-};
+}
